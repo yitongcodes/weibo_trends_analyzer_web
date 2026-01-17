@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>微博热搜创意产品分析报告 - Weibo Trends Product Analysis</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 20px;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+        }
+
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        header .subtitle {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+
+        .metadata {
+            display: flex;
+            justify-content: space-around;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            margin-top: 20px;
+            border-radius: 10px;
+        }
+
+        .metadata-item {
+            text-align: center;
+        }
+
+        .metadata-item .label {
+            font-size: 0.9em;
+            opacity: 0.8;
+        }
+
+        .metadata-item .value {
+            font-size: 1.8em;
+            font-weight: bold;
+            margin-top: 5px;
+        }
+
+        .controls {
+            padding: 30px 40px;
+            background: #f8f9fa;
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        .search-box {
+            flex: 1;
+            min-width: 250px;
+        }
+
+        .search-box input {
+            width: 100%;
+            padding: 12px 20px;
+            border: 2px solid #ddd;
+            border-radius: 25px;
+            font-size: 1em;
+            transition: all 0.3s;
+        }
+
+        .search-box input:focus {
+            outline: none;
+            border-color: #667eea;
+            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+        }
+
+        .filter-buttons {
+            display: flex;
+            gap: 10px;
+        }
+
+        .filter-btn {
+            padding: 10px 20px;
+            border: 2px solid #ddd;
+            background: white;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-weight: 500;
+        }
+
+        .filter-btn:hover {
+            background: #f0f0f0;
+        }
+
+        .filter-btn.active {
+            background: #667eea;
+            color: white;
+            border-color: #667eea;
+        }
+
+        .content {
+            padding: 40px;
+        }
+
+        .section-title {
+            font-size: 1.8em;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #667eea;
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .product-card {
+            border: 2px solid #e0e0e0;
+            border-radius: 15px;
+            overflow: hidden;
+            transition: all 0.3s;
+            background: white;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .product-card.excellent {
+            border-color: #FFD700;
+            background: linear-gradient(135deg, #FFF9E6 0%, #FFFEF0 100%);
+        }
+
+        .product-card.good {
+            border-color: #4A90E2;
+            background: linear-gradient(135deg, #E8F4FF 0%, #F0F8FF 100%);
+        }
+
+        .product-card.other {
+            border-color: #95A5A6;
+        }
+
+        .card-header {
+            padding: 20px;
+            position: relative;
+        }
+
+        .card-header.excellent {
+            background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%);
+            color: white;
+        }
+
+        .card-header.good {
+            background: linear-gradient(135deg, #4A90E2 0%, #50C8E8 100%);
+            color: white;
+        }
+
+        .card-header.other {
+            background: linear-gradient(135deg, #95A5A6 0%, #BDC3C7 100%);
+            color: white;
+        }
+
+        .trend-info {
+            margin-bottom: 15px;
+        }
+
+        .trend-keyword {
+            font-size: 1.5em;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .trend-meta {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            font-size: 0.9em;
+            opacity: 0.95;
+        }
+
+        .badge {
+            background: rgba(255, 255, 255, 0.3);
+            padding: 4px 12px;
+            border-radius: 12px;
+            font-weight: 500;
+        }
+
+        .score-display {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .total-score {
+            font-size: 3em;
+            font-weight: bold;
+            line-height: 1;
+        }
+
+        .tier-badge {
+            font-size: 1.2em;
+            margin-top: 5px;
+        }
+
+        .card-body {
+            padding: 25px;
+        }
+
+        .product-details {
+            margin-bottom: 20px;
+        }
+
+        .detail-row {
+            margin-bottom: 15px;
+            line-height: 1.6;
+        }
+
+        .detail-label {
+            font-weight: bold;
+            color: #667eea;
+            display: inline-block;
+            min-width: 100px;
+        }
+
+        .score-breakdown {
+            margin: 25px 0;
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 10px;
+        }
+
+        .score-breakdown h4 {
+            margin-bottom: 15px;
+            color: #333;
+        }
+
+        .score-bar {
+            display: flex;
+            align-items: center;
+            margin-bottom: 12px;
+            gap: 10px;
+        }
+
+        .score-bar-label {
+            min-width: 100px;
+            font-size: 0.9em;
+            color: #666;
+        }
+
+        .score-bar-track {
+            flex: 1;
+            height: 20px;
+            background: #e0e0e0;
+            border-radius: 10px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .score-bar-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+            border-radius: 10px;
+            transition: width 0.5s ease;
+        }
+
+        .score-bar-value {
+            min-width: 60px;
+            text-align: right;
+            font-weight: bold;
+            color: #667eea;
+        }
+
+        .research-summary {
+            margin-top: 20px;
+            padding: 20px;
+            background: #f0f4f8;
+            border-radius: 10px;
+            border-left: 4px solid #667eea;
+        }
+
+        .research-summary h4 {
+            margin-bottom: 15px;
+            color: #333;
+        }
+
+        .research-item {
+            margin-bottom: 12px;
+            font-size: 0.9em;
+            line-height: 1.6;
+        }
+
+        .research-label {
+            font-weight: bold;
+            color: #667eea;
+        }
+
+        .justification {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 5px;
+            font-size: 0.95em;
+            line-height: 1.6;
+        }
+
+        footer {
+            background: #2c3e50;
+            color: white;
+            padding: 30px 40px;
+            text-align: center;
+        }
+
+        footer p {
+            margin: 10px 0;
+            opacity: 0.8;
+        }
+
+        @media (max-width: 768px) {
+            .products-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .metadata {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .controls {
+                flex-direction: column;
+            }
+
+            .filter-buttons {
+                width: 100%;
+                justify-content: space-between;
+            }
+        }
+
+        .no-results {
+            text-align: center;
+            padding: 60px 20px;
+            color: #999;
+            font-size: 1.2em;
+        }
+
+        .hidden {
+            display: none !important;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🔥 微博热搜创意产品分析报告</h1>
+            <p class="subtitle">Weibo Trends Product Analysis Dashboard</p>
+            <div class="metadata">
+                <div class="metadata-item">
+                    <div class="label">生成时间</div>
+                    <div class="value">{{ metadata.generated_at }}</div>
+                </div>
+                <div class="metadata-item">
+                    <div class="label">分析数量</div>
+                    <div class="value">{{ metadata.total_analyzed }}</div>
+                </div>
+                <div class="metadata-item">
+                    <div class="label">平均分数</div>
+                    <div class="value">{{ metadata.average_score }}</div>
+                </div>
+                <div class="metadata-item">
+                    <div class="label">优秀产品</div>
+                    <div class="value">🏆 {{ metadata.excellent_count }}</div>
+                </div>
+            </div>
+        </header>
+
+        <div class="controls">
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="🔍 搜索关键词、产品名称..." />
+            </div>
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-tier="all">全部</button>
+                <button class="filter-btn" data-tier="excellent">🏆 优秀</button>
+                <button class="filter-btn" data-tier="good">⭐ 良好</button>
+                <button class="filter-btn" data-tier="other">📋 其他</button>
+            </div>
+        </div>
+
+        <div class="content">
+            {% if excellent_products %}
+            <section id="excellent-section">
+                <h2 class="section-title">🏆 优秀产品 (≥80分) - 优先开发推荐</h2>
+                <div class="products-grid">
+                    {% for product in excellent_products %}
+                    <div class="product-card excellent" data-tier="excellent" data-keywords="{{ product.keyword }} {{ product.product_name }}">
+                        <div class="card-header excellent">
+                            <div class="trend-info">
+                                <div class="trend-keyword">{{ product.keyword }}</div>
+                                <div class="trend-meta">
+                                    <span class="badge">排名 #{{ product.rank }}</span>
+                                    <span class="badge">热度 {{ "{:,}".format(product.heat_value) }}</span>
+                                    {% if product.tag %}
+                                    <span class="badge">{{ product.tag }}</span>
+                                    {% endif %}
+                                    {% if product.category %}
+                                    <span class="badge">{{ product.category }}</span>
+                                    {% endif %}
+                                </div>
+                            </div>
+                            <div class="score-display">
+                                <div class="total-score">{{ product.total_score }}</div>
+                                <div class="tier-badge">{{ product.tier_badge }}</div>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div class="product-details">
+                                <h3 style="color: #667eea; margin-bottom: 15px;">{{ product.product_name }}</h3>
+                                <div class="detail-row">
+                                    <span class="detail-label">市场赛道:</span>
+                                    <span>{{ product.market_category }}</span>
+                                </div>
+                                <div class="detail-row">
+                                    <span class="detail-label">目标人群:</span>
+                                    <span>{{ product.target_audience }}</span>
+                                </div>
+                                <div class="detail-row">
+                                    <span class="detail-label">产品描述:</span>
+                                    <span>{{ product.description }}</span>
+                                </div>
+                                <div class="detail-row">
+                                    <span class="detail-label">生产特点:</span>
+                                    <span>{{ product.manufacturing_details }}</span>
+                                </div>
+                            </div>
+
+                            <div class="score-breakdown">
+                                <h4>📊 评分详情</h4>
+                                <div class="score-bar">
+                                    <div class="score-bar-label">可发展度</div>
+                                    <div class="score-bar-track">
+                                        <div class="score-bar-fill" style="width: {{ (product.score_breakdown.development_potential / 40 * 100)|round }}%;"></div>
+                                    </div>
+                                    <div class="score-bar-value">{{ product.score_breakdown.development_potential }}/40</div>
+                                </div>
+                                <div class="score-bar">
+                                    <div class="score-bar-label">有趣度</div>
+                                    <div class="score-bar-track">
+                                        <div class="score-bar-fill" style="width: {{ (product.score_breakdown.interest_level / 20 * 100)|round }}%;"></div>
+                                    </div>
+                                    <div class="score-bar-value">{{ product.score_breakdown.interest_level }}/20</div>
+                                </div>
+                                <div class="score-bar">
+                                    <div class="score-bar-label">生活有用度</div>
+                                    <div class="score-bar-track">
+                                        <div class="score-bar-fill" style="width: {{ (product.score_breakdown.life_utility / 20 * 100)|round }}%;"></div>
+                                    </div>
+                                    <div class="score-bar-value">{{ product.score_breakdown.life_utility }}/20</div>
+                                </div>
+                                <div class="score-bar">
+                                    <div class="score-bar-label">生产容易度</div>
+                                    <div class="score-bar-track">
+                                        <div class="score-bar-fill" style="width: {{ (product.score_breakdown.production_ease / 20 * 100)|round }}%;"></div>
+                                    </div>
+                                    <div class="score-bar-value">{{ product.score_breakdown.production_ease }}/20</div>
+                                </div>
+                            </div>
+
+                            <div class="justification">
+                                <strong>💡 评分理由:</strong><br>
+                                {{ product.score_justification }}
+                            </div>
+
+                            <div class="research-summary">
+                                <h4>🔍 背景研究</h4>
+                                <div class="research-item">
+                                    <span class="research-label">社交媒体:</span><br>
+                                    {{ product.research_summary.social_media[:200] }}...
+                                </div>
+                                <div class="research-item">
+                                    <span class="research-label">用户洞察:</span><br>
+                                    {{ product.research_summary.user_insights[:200] }}...
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </section>
+            {% endif %}
+
+            {% if good_products %}
+            <section id="good-section" style="margin-top: 50px;">
+                <h2 class="section-title">⭐ 良好产品 (60-79分) - 可考虑开发</h2>
+                <div class="products-grid">
+                    {% for product in good_products %}
+                    <div class="product-card good" data-tier="good" data-keywords="{{ product.keyword }} {{ product.product_name }}">
+                        <div class="card-header good">
+                            <div class="trend-info">
+                                <div class="trend-keyword">{{ product.keyword }}</div>
+                                <div class="trend-meta">
+                                    <span class="badge">排名 #{{ product.rank }}</span>
+                                    <span class="badge">热度 {{ "{:,}".format(product.heat_value) }}</span>
+                                    {% if product.tag %}
+                                    <span class="badge">{{ product.tag }}</span>
+                                    {% endif %}
+                                </div>
+                            </div>
+                            <div class="score-display">
+                                <div class="total-score">{{ product.total_score }}</div>
+                                <div class="tier-badge">{{ product.tier_badge }}</div>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div class="product-details">
+                                <h3 style="color: #4A90E2; margin-bottom: 15px;">{{ product.product_name }}</h3>
+                                <div class="detail-row">
+                                    <span class="detail-label">市场赛道:</span>
+                                    <span>{{ product.market_category }}</span>
+                                </div>
+                                <div class="detail-row">
+                                    <span class="detail-label">目标人群:</span>
+                                    <span>{{ product.target_audience }}</span>
+                                </div>
+                                <div class="detail-row">
+                                    <span class="detail-label">产品描述:</span>
+                                    <span>{{ product.description }}</span>
+                                </div>
+                                <div class="detail-row">
+                                    <span class="detail-label">生产特点:</span>
+                                    <span>{{ product.manufacturing_details }}</span>
+                                </div>
+                            </div>
+
+                            <div class="score-breakdown">
+                                <h4>📊 评分详情</h4>
+                                <div class="score-bar">
+                                    <div class="score-bar-label">可发展度</div>
+                                    <div class="score-bar-track">
+                                        <div class="score-bar-fill" style="width: {{ (product.score_breakdown.development_potential / 40 * 100)|round }}%;"></div>
+                                    </div>
+                                    <div class="score-bar-value">{{ product.score_breakdown.development_potential }}/40</div>
+                                </div>
+                                <div class="score-bar">
+                                    <div class="score-bar-label">有趣度</div>
+                                    <div class="score-bar-track">
+                                        <div class="score-bar-fill" style="width: {{ (product.score_breakdown.interest_level / 20 * 100)|round }}%;"></div>
+                                    </div>
+                                    <div class="score-bar-value">{{ product.score_breakdown.interest_level }}/20</div>
+                                </div>
+                                <div class="score-bar">
+                                    <div class="score-bar-label">生活有用度</div>
+                                    <div class="score-bar-track">
+                                        <div class="score-bar-fill" style="width: {{ (product.score_breakdown.life_utility / 20 * 100)|round }}%;"></div>
+                                    </div>
+                                    <div class="score-bar-value">{{ product.score_breakdown.life_utility }}/20</div>
+                                </div>
+                                <div class="score-bar">
+                                    <div class="score-bar-label">生产容易度</div>
+                                    <div class="score-bar-track">
+                                        <div class="score-bar-fill" style="width: {{ (product.score_breakdown.production_ease / 20 * 100)|round }}%;"></div>
+                                    </div>
+                                    <div class="score-bar-value">{{ product.score_breakdown.production_ease }}/20</div>
+                                </div>
+                            </div>
+
+                            <div class="justification">
+                                <strong>💡 评分理由:</strong><br>
+                                {{ product.score_justification }}
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </section>
+            {% endif %}
+
+            {% if other_products %}
+            <section id="other-section" style="margin-top: 50px;">
+                <h2 class="section-title">📋 其他产品 (<60分) - 观望或需优化</h2>
+                <div class="products-grid">
+                    {% for product in other_products %}
+                    <div class="product-card other" data-tier="other" data-keywords="{{ product.keyword }} {{ product.product_name }}">
+                        <div class="card-header other">
+                            <div class="trend-info">
+                                <div class="trend-keyword">{{ product.keyword }}</div>
+                                <div class="trend-meta">
+                                    <span class="badge">排名 #{{ product.rank }}</span>
+                                    <span class="badge">热度 {{ "{:,}".format(product.heat_value) }}</span>
+                                </div>
+                            </div>
+                            <div class="score-display">
+                                <div class="total-score">{{ product.total_score }}</div>
+                                <div class="tier-badge">{{ product.tier_badge }}</div>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div class="product-details">
+                                <h3 style="color: #95A5A6; margin-bottom: 15px;">{{ product.product_name }}</h3>
+                                <div class="detail-row">
+                                    <span class="detail-label">市场赛道:</span>
+                                    <span>{{ product.market_category }}</span>
+                                </div>
+                                <div class="detail-row">
+                                    <span class="detail-label">目标人群:</span>
+                                    <span>{{ product.target_audience }}</span>
+                                </div>
+                                <div class="detail-row">
+                                    <span class="detail-label">产品描述:</span>
+                                    <span>{{ product.description }}</span>
+                                </div>
+                            </div>
+
+                            <div class="score-breakdown">
+                                <h4>📊 评分详情</h4>
+                                <div class="score-bar">
+                                    <div class="score-bar-label">可发展度</div>
+                                    <div class="score-bar-track">
+                                        <div class="score-bar-fill" style="width: {{ (product.score_breakdown.development_potential / 40 * 100)|round }}%;"></div>
+                                    </div>
+                                    <div class="score-bar-value">{{ product.score_breakdown.development_potential }}/40</div>
+                                </div>
+                                <div class="score-bar">
+                                    <div class="score-bar-label">有趣度</div>
+                                    <div class="score-bar-track">
+                                        <div class="score-bar-fill" style="width: {{ (product.score_breakdown.interest_level / 20 * 100)|round }}%;"></div>
+                                    </div>
+                                    <div class="score-bar-value">{{ product.score_breakdown.interest_level }}/20</div>
+                                </div>
+                                <div class="score-bar">
+                                    <div class="score-bar-label">生活有用度</div>
+                                    <div class="score-bar-track">
+                                        <div class="score-bar-fill" style="width: {{ (product.score_breakdown.life_utility / 20 * 100)|round }}%;"></div>
+                                    </div>
+                                    <div class="score-bar-value">{{ product.score_breakdown.life_utility }}/20</div>
+                                </div>
+                                <div class="score-bar">
+                                    <div class="score-bar-label">生产容易度</div>
+                                    <div class="score-bar-track">
+                                        <div class="score-bar-fill" style="width: {{ (product.score_breakdown.production_ease / 20 * 100)|round }}%;"></div>
+                                    </div>
+                                    <div class="score-bar-value">{{ product.score_breakdown.production_ease }}/20</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </section>
+            {% endif %}
+
+            <div id="noResults" class="no-results hidden">
+                <p>😔 没有找到匹配的产品</p>
+            </div>
+        </div>
+
+        <footer>
+            <p>⚠️ 免责声明：本报告基于AI分析生成，产品创意仅供参考。实际开发需进行深入市场调研。</p>
+            <p>📊 建议在投产前进行详细的市场调研、知识产权检查和合规性审核。</p>
+            <p>🤖 Generated by Claude Code GitHub Actions | Data Source: TianAPI Weibo Trending</p>
+        </footer>
+    </div>
+
+    <script>
+        // Search functionality
+        const searchInput = document.getElementById('searchInput');
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        const productCards = document.querySelectorAll('.product-card');
+        const noResults = document.getElementById('noResults');
+
+        let currentTier = 'all';
+        let currentSearch = '';
+
+        function filterProducts() {
+            let visibleCount = 0;
+
+            productCards.forEach(card => {
+                const tier = card.dataset.tier;
+                const keywords = card.dataset.keywords.toLowerCase();
+
+                const tierMatch = currentTier === 'all' || tier === currentTier;
+                const searchMatch = keywords.includes(currentSearch.toLowerCase());
+
+                if (tierMatch && searchMatch) {
+                    card.classList.remove('hidden');
+                    visibleCount++;
+                } else {
+                    card.classList.add('hidden');
+                }
+            });
+
+            if (visibleCount === 0) {
+                noResults.classList.remove('hidden');
+            } else {
+                noResults.classList.add('hidden');
+            }
+        }
+
+        searchInput.addEventListener('input', (e) => {
+            currentSearch = e.target.value;
+            filterProducts();
+        });
+
+        filterButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                filterButtons.forEach(btn => btn.classList.remove('active'));
+                button.classList.add('active');
+                currentTier = button.dataset.tier;
+                filterProducts();
+            });
+        });
+    </script>
+</body>
+</html>

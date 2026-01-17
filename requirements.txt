@@ -1,0 +1,20 @@
+# Claude Agent SDK for AI-powered analysis
+claude-agent-sdk>=0.1.0
+
+# HTTP requests for API calls
+requests>=2.31.0
+
+# HTML template rendering
+jinja2>=3.1.2
+
+# Date/time utilities
+python-dateutil>=2.8.2
+
+# Environment variable management
+python-dotenv>=1.0.0
+
+# JSON processing
+# (built-in, no need to install)
+
+# Optional: Web scraping (if needed as fallback)
+beautifulsoup4>=4.12.0

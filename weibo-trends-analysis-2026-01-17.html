@@ -1,0 +1,1435 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>微博热搜创意产品分析报告 - Weibo Trends Product Analysis</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            overflow: hidden;
+        }
+
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+
+        .meta-info {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 20px;
+            flex-wrap: wrap;
+        }
+
+        .meta-item {
+            background: rgba(255,255,255,0.2);
+            padding: 10px 20px;
+            border-radius: 10px;
+        }
+
+        .controls {
+            padding: 30px 40px;
+            background: #f8f9fa;
+            border-bottom: 2px solid #e9ecef;
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        .search-box {
+            flex: 1;
+            min-width: 250px;
+        }
+
+        .search-box input {
+            width: 100%;
+            padding: 12px 20px;
+            border: 2px solid #dee2e6;
+            border-radius: 10px;
+            font-size: 16px;
+            transition: border-color 0.3s;
+        }
+
+        .search-box input:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+
+        .filter-btn {
+            padding: 12px 24px;
+            border: none;
+            border-radius: 10px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: all 0.3s;
+            background: white;
+            border: 2px solid #dee2e6;
+        }
+
+        .filter-btn.active {
+            background: #667eea;
+            color: white;
+            border-color: #667eea;
+        }
+
+        .filter-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+
+        .content {
+            padding: 40px;
+        }
+
+        .summary-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+
+        .stat-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 25px;
+            border-radius: 15px;
+            text-align: center;
+        }
+
+        .stat-value {
+            font-size: 2.5em;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .stat-label {
+            opacity: 0.9;
+        }
+
+        .product-card {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            margin-bottom: 25px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+            border-left: 5px solid #dee2e6;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+        }
+
+        .product-card.excellent {
+            border-left-color: #FFD700;
+            background: linear-gradient(to right, #fff9e6 0%, white 100%);
+        }
+
+        .product-card.good {
+            border-left-color: #4A90E2;
+            background: linear-gradient(to right, #e6f2ff 0%, white 100%);
+        }
+
+        .trend-info {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .trend-title {
+            font-size: 1.8em;
+            color: #2c3e50;
+            flex: 1;
+        }
+
+        .trend-meta {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .badge {
+            padding: 6px 12px;
+            border-radius: 8px;
+            font-size: 0.9em;
+            font-weight: 600;
+        }
+
+        .badge-rank {
+            background: #e74c3c;
+            color: white;
+        }
+
+        .badge-heat {
+            background: #f39c12;
+            color: white;
+        }
+
+        .badge-tag {
+            background: #9b59b6;
+            color: white;
+        }
+
+        .product-header {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        .product-name {
+            font-size: 1.5em;
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+
+        .score-display {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+
+        .total-score {
+            font-size: 3em;
+            font-weight: bold;
+            color: #667eea;
+        }
+
+        .score-badge {
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-weight: 600;
+            font-size: 1.1em;
+        }
+
+        .score-badge.excellent {
+            background: #FFD700;
+            color: #8B4513;
+        }
+
+        .score-badge.good {
+            background: #4A90E2;
+            color: white;
+        }
+
+        .score-badge.other {
+            background: #95A5A6;
+            color: white;
+        }
+
+        .product-details {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-bottom: 25px;
+        }
+
+        .detail-item {
+            padding: 15px;
+            background: #f8f9fa;
+            border-radius: 10px;
+        }
+
+        .detail-label {
+            font-weight: 600;
+            color: #667eea;
+            margin-bottom: 5px;
+        }
+
+        .score-breakdown {
+            margin-bottom: 25px;
+        }
+
+        .score-breakdown h4 {
+            color: #2c3e50;
+            margin-bottom: 15px;
+            font-size: 1.2em;
+        }
+
+        .score-bar-item {
+            margin-bottom: 15px;
+        }
+
+        .score-bar-header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 8px;
+        }
+
+        .score-bar-label {
+            font-weight: 600;
+            color: #2c3e50;
+        }
+
+        .score-bar-value {
+            color: #667eea;
+            font-weight: 600;
+        }
+
+        .score-bar-progress {
+            height: 20px;
+            background: #e9ecef;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .score-bar-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+            transition: width 0.6s ease;
+            border-radius: 10px;
+        }
+
+        .analysis-section {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        .analysis-section h4 {
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+
+        .research-summary {
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            border: 2px solid #e9ecef;
+        }
+
+        .research-summary h4 {
+            color: #667eea;
+            margin-bottom: 15px;
+        }
+
+        .research-summary ul {
+            list-style: none;
+        }
+
+        .research-summary li {
+            padding: 10px 0;
+            border-bottom: 1px solid #e9ecef;
+        }
+
+        .research-summary li:last-child {
+            border-bottom: none;
+        }
+
+        .research-summary strong {
+            color: #2c3e50;
+        }
+
+        footer {
+            background: #2c3e50;
+            color: white;
+            padding: 30px 40px;
+            text-align: center;
+        }
+
+        .disclaimer {
+            background: #34495e;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            font-size: 0.9em;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 1.8em;
+            }
+
+            .product-details {
+                grid-template-columns: 1fr;
+            }
+
+            .controls {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🔥 微博热搜创意产品分析报告</h1>
+            <p class="subtitle">Weibo Trends Product Analysis Dashboard</p>
+            <div class="meta-info">
+                <div class="meta-item">
+                    <strong>生成时间:</strong> 2026-01-17
+                </div>
+                <div class="meta-item">
+                    <strong>分析主题:</strong> 10个
+                </div>
+                <div class="meta-item">
+                    <strong>平均得分:</strong> 69.5分
+                </div>
+            </div>
+        </header>
+
+        <div class="controls">
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="🔍 搜索关键词...">
+            </div>
+            <button class="filter-btn active" data-filter="all">全部</button>
+            <button class="filter-btn" data-filter="excellent">🏆 优秀 (≥80分)</button>
+            <button class="filter-btn" data-filter="good">⭐ 良好 (60-79分)</button>
+            <button class="filter-btn" data-filter="other">📋 其他 (<60分)</button>
+        </div>
+
+        <div class="content">
+            <div class="summary-stats">
+                <div class="stat-card">
+                    <div class="stat-value">10</div>
+                    <div class="stat-label">热搜话题分析</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value">3</div>
+                    <div class="stat-label">优秀产品 (≥80分)</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value">5</div>
+                    <div class="stat-label">良好产品 (60-79分)</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value">69.5</div>
+                    <div class="stat-label">平均得分</div>
+                </div>
+            </div>
+
+            <div id="productsList">
+                <!-- Product 1 -->
+                <div class="product-card excellent" data-score="85" data-tier="excellent">
+                    <div class="trend-info">
+                        <h2 class="trend-title">涨20元月薪公司已连续37年涨薪</h2>
+                        <div class="trend-meta">
+                            <span class="badge badge-rank">#1</span>
+                            <span class="badge badge-heat">热度: 172,298</span>
+                        </div>
+                    </div>
+
+                    <div class="product-header">
+                        <h3 class="product-name">💼 企业文化主题办公文创礼盒</h3>
+                        <div class="score-display">
+                            <div class="total-score">85/100</div>
+                            <span class="score-badge excellent">🏆 优秀</span>
+                        </div>
+                    </div>
+
+                    <div class="product-details">
+                        <div class="detail-item">
+                            <div class="detail-label">市场赛道</div>
+                            <div>办公文创礼品</div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="detail-label">目标人群</div>
+                            <div>企业HR、管理层、员工福利采购方</div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="detail-label">生产特点</div>
+                            <div>丝网印刷+礼盒包装，MOQ 500套，单价20-50元</div>
+                        </div>
+                    </div>
+
+                    <div class="detail-item" style="margin-bottom: 20px;">
+                        <div class="detail-label">产品描述</div>
+                        <div>以"坚守37年涨薪传统"为主题的企业文化文创礼盒，包含定制笔记本、励志台历、感恩卡片等，适合企业年会、周年庆、员工激励场景。传递"长期主义"和"员工关怀"价值观。</div>
+                    </div>
+
+                    <div class="score-breakdown">
+                        <h4>📊 评分详情</h4>
+                        <div class="score-bar-item">
+                            <div class="score-bar-header">
+                                <span class="score-bar-label">可发展度</span>
+                                <span class="score-bar-value">32/40</span>
+                            </div>
+                            <div class="score-bar-progress">
+                                <div class="score-bar-fill" style="width: 80%"></div>
+                            </div>
+                        </div>
+                        <div class="score-bar-item">
+                            <div class="score-bar-header">
+                                <span class="score-bar-label">有趣度</span>
+                                <span class="score-bar-value">16/20</span>
+                            </div>
+                            <div class="score-bar-progress">
+                                <div class="score-bar-fill" style="width: 80%"></div>
+                            </div>
+                        </div>
+                        <div class="score-bar-item">
+                            <div class="score-bar-header">
+                                <span class="score-bar-label">生活有用度</span>
+                                <span class="score-bar-value">18/20</span>
+                            </div>
+                            <div class="score-bar-progress">
+                                <div class="score-bar-fill" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div class="score-bar-item">
+                            <div class="score-bar-header">
+                                <span class="score-bar-label">生产容易度</span>
+                                <span class="score-bar-value">19/20</span>
+                            </div>
+                            <div class="score-bar-progress">
+                                <div class="score-bar-fill" style="width: 95%"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="analysis-section">
+                        <h4>分数分析</h4>
+                        <p>重庆美心集团连续37年涨薪的感人故事触动了大量企业管理者和HR。产品市场需求明确（企业文化建设、员工激励），生产工艺成熟，定制化程度高，利润空间可观。可通过淘宝、1688、企业采购平台等渠道销售，具备长期发展潜力。</p>
+                    </div>
+
+                    <div class="research-summary">
+                        <h4>🔍 背景研究</h4>
+                        <ul>
+                            <li><strong>社交媒体:</strong> 话题在微博引发近7百万关注，网友普遍赞扬企业的社会责任感和"不裁员不降薪"底线，认为在当前经济环境下难能可贵</li>
+                            <li><strong>新闻背景:</strong> 重庆美心集团自1989年成立以来坚持每年涨薪传统，2026年虽然只涨20元但仍发致歉信表达诚意，体现企业文化价值</li>
+                            <li><strong>用户洞察:</strong> 企业HR和管理层对员工关怀主题的文创产品有强烈需求，可用于内部激励和文化宣传</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="product-card good" data-score="72" data-tier="good">
+                    <div class="trend-info">
+                        <h2 class="trend-title">轧戏</h2>
+                        <div class="trend-meta">
+                            <span class="badge badge-rank">#2</span>
+                            <span class="badge badge-heat">热度: 125,199</span>
+                            <span class="badge badge-tag">剧集</span>
+                        </div>
+                    </div>
+
+                    <div class="product-header">
+                        <h3 class="product-name">🎬 剧本杀周边剧情盲盒</h3>
+                        <div class="score-display">
+                            <div class="total-score">72/100</div>
+                            <span class="score-badge good">⭐ 良好</span>
+                        </div>
+                    </div>
+
+                    <div class="product-details">
+                        <div class="detail-item">
+                            <div class="detail-label">市场赛道</div>
+                            <div>影视周边+剧本杀衍生品</div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="detail-label">目标人群</div>
+                            <div>18-30岁剧本杀爱好者、都市剧粉丝</div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="detail-label">生产特点</div>
+                            <div>注塑成型+卡片印刷，MOQ 3000套，单价15-35元</div>
+                        </div>
+                    </div>
+
+                    <div class="detail-item" style="margin-bottom: 20px;">
+                        <div class="detail-label">产品描述</div>
+                        <div>以《轧戏》剧情为背景的剧本杀周边盲盒，包含角色卡牌、剧情线索徽章、民国主题摆件等。结合剧中虚拟与现实交织的特色，开发"双重身份"玩法，增强互动性和收藏价值。</div>
+                    </div>
+
+                    <div class="score-breakdown">
+                        <h4>📊 评分详情</h4>
+                        <div class="score-bar-item">
+                            <div class="score-bar-header">
+                                <span class="score-bar-label">可发展度</span>
+                                <span class="score-bar-value">27/40</span>
+                            </div>
+                            <div class="score-bar-progress">
+                                <div class="score-bar-fill" style="width: 67.5%"></div>
+                            </div>
+                        </div>
+                        <div class="score-bar-item">
+                            <div class="score-bar-header">
+                                <span class="score-bar-label">有趣度</span>
+                                <span class="score-bar-value">18/20</span>
+                            </div>
+                            <div class="score-bar-progress">
+                                <div class="score-bar-fill" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div class="score-bar-item">
+                            <div class="score-bar-header">
+                                <span class="score-bar-label">生活有用度</span>
+                                <span class="score-bar-value">12/20</span>
+                            </div>
+                            <div class="score-bar-progress">
+                                <div class="score-bar-fill" style="width: 60%"></div>
+                            </div>
+                        </div>
+                        <div class="score-bar-item">
+                            <div class="score-bar-header">
+                                <span class="score-bar-label">生产容易度</span>
+                                <span class="score-bar-value">15/20</span>
+                            </div>
+                            <div class="score-bar-progress">
+                                <div class="score-bar-fill" style="width: 75%"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="analysis-section">
+                        <h4>分数分析</h4>
+                        <p>《轧戏》开播破5000万预约，剧本杀元素契合年轻受众。但影视周边市场竞争激烈，需快速抢占先机。产品趣味性高但实用性一般，适合作为粉丝收藏品和社交货币。生产需考虑版权授权成本。</p>
+                    </div>
+
+                    <div class="research-summary">
+                        <h4>🔍 背景研究</h4>
+                        <ul>
+                            <li><strong>社交媒体:</strong> 该剧在抖音话题量达3.5亿，剧情虚实交织引发热议，配角代旭意外成为人气王</li>
+                            <li><strong>新闻背景:</strong> 都市爱情剧《轧戏》由陈星旭、卢昱晓主演，以剧本杀为背景讲述虚拟与现实的身份探索故事，开播热度高但曾因使用真实信息引发争议</li>
+                            <li><strong>用户洞察:</strong> 年轻观众对剧本杀文化高度认同，愿意为剧情周边买单，但需要高质量设计和版权授权</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Product 3 -->
+                <div class="product-card excellent" data-score="88" data-tier="excellent">
+                    <div class="trend-info">
+                        <h2 class="trend-title">冰雪热力中的中国经济新脉动</h2>
+                        <div class="trend-meta">
+                            <span class="badge badge-rank">#3</span>
+                            <span class="badge badge-heat">热度: 100,921</span>
+                        </div>
+                    </div>
+
+                    <div class="product-header">
+                        <h3 class="product-name">⛷️ 多功能便携式冰雪运动装备包</h3>
+                        <div class="score-display">
+                            <div class="total-score">88/100</div>
+                            <span class="score-badge excellent">🏆 优秀</span>
+                        </div>
+                    </div>
+
+                    <div class="product-details">
+                        <div class="detail-item">
+                            <div class="detail-label">市场赛道</div>
+                            <div>运动户外装备</div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="detail-label">目标人群</div>
+                            <div>冰雪运动爱好者、滑雪初学者、户外运动家庭</div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="detail-label">生产特点</div>
+                            <div>防水材料+模块化设计，MOQ 1000个，单价80-150元</div>
+                        </div>
+                    </div>
+
+                    <div class="detail-item" style="margin-bottom: 20px;">
+                        <div class="detail-label">产品描述</div>
+                        <div>针对万亿冰雪经济市场，设计多功能便携装备包，包含防水雪镜收纳、保温层、装备挂钩、应急药品仓等。采用轻量化材料，适配滑雪、滑冰等多场景。可定制队标、家庭标识，增强情感价值。</div>
+                    </div>
+
+                    <div class="score-breakdown">
+                        <h4>📊 评分详情</h4>
+                        <div class="score-bar-item">
+                            <div class="score-bar-header">
+                                <span class="score-bar-label">可发展度</span>
+                                <span class="score-bar-value">37/40</span>
+                            </div>
+                            <div class="score-bar-progress">
+                                <div class="score-bar-fill" style="width: 92.5%"></div>
+                            </div>
+                        </div>
+                        <div class="score-bar-item">
+                            <div class="score-bar-header">
+                                <span class="score-bar-label">有趣度</span>
+                                <span class="score-bar-value">15/20</span>
+                            </div>
+                            <div class="score-bar-progress">
+                                <div class="score-bar-fill" style="width: 75%"></div>
+                            </div>
+                        </div>
+                        <div class="score-bar-item">
+                            <div class="score-bar-header">
+                                <span class="score-bar-label">生活有用度</span>
+                                <span class="score-bar-value">19/20</span>
+                            </div>
+                            <div class="score-bar-progress">
+                                <div class="score-bar-fill" style="width: 95%"></div>
+                            </div>
+                        </div>
+                        <div class="score-bar-item">
+                            <div class="score-bar-header">
+                                <span class="score-bar-label">生产容易度</span>
+                                <span class="score-bar-value">17/20</span>
+                            </div>
+                            <div class="score-bar-progress">
+                                <div class="score-bar-fill" style="width: 85%"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="analysis-section">
+                        <h4>分数分析</h4>
+                        <p>中国冰雪经济已突破万亿规模，2.92亿人参与，市场增长204.5%。装备市场从153亿增至240亿，需求旺盛。该产品解决实际痛点，符合"护肤式护发"升级趋势，市场前景广阔，可通过电商、滑雪场、户外店等多渠道销售。</p>
+                    </div>
+
+                    <div class="research-summary">
+                        <h4>🔍 背景研究</h4>
+                        <ul>
+                            <li><strong>社交媒体:</strong> 冰雪经济成为热点，哈尔滨现象、冬奥效应持续发酵，消费者追求综合度假体验而非单纯滑雪</li>
+                            <li><strong>新闻背景:</strong> 中国冰雪产业规模2025年突破1万亿元，年均增长14%以上，"冷资源"激活"热经济"，从单一门票经济转向全产业链发展</li>
+                            <li><strong>用户洞察:</strong> 86%消费者参与冰雪运动会产生消费，52.55%愿花费超500元，主要支出在门票、交通、餐饮，对高端装备和专业服务需求增长</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Product 4 -->
+                <div class="product-card excellent" data-score="82" data-tier="excellent">
+                    <div class="trend-info">
+                        <h2 class="trend-title">男孩凌晨5点起床写作业突然晕倒</h2>
+                        <div class="trend-meta">
+                            <span class="badge badge-rank">#4</span>
+                            <span class="badge badge-heat">热度: 99,101</span>
+                        </div>
+                    </div>
+
+                    <div class="product-header">
+                        <h3 class="product-name">💡 智能护眼学习台灯+作息提醒系统</h3>
+                        <div class="score-display">
+                            <div class="total-score">82/100</div>
+                            <span class="score-badge excellent">🏆 优秀</span>
+                        </div>
+                    </div>
+
+                    <div class="product-details">
+                        <div class="detail-item">
+                            <div class="detail-label">市场赛道</div>
+                            <div>功能性儿童学习用品</div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="detail-label">目标人群</div>
+                            <div>6-18岁学生家长、教育机构</div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="detail-label">生产特点</div>
+                            <div>注塑+电子组装，MOQ 2000台，单价150-300元</div>
+                        </div>
+                    </div>
+
+                    <div class="detail-item" style="margin-bottom: 20px;">
+                        <div class="detail-label">产品描述</div>
+                        <div>集成护眼光源、作息智能提醒、久坐检测、睡眠不足警报等功能。当检测到连续学习超2小时或凌晨时段开灯，自动提醒休息。配套家长APP，监控学习时长和健康数据。针对学业压力大的痛点，帮助孩子科学作息。</div>
+                    </div>
+
+                    <div class="score-breakdown">
+                        <h4>📊 评分详情</h4>
+                        <div class="score-bar-item">
+                            <div class="score-bar-header">
+                                <span class="score-bar-label">可发展度</span>
+                                <span class="score-bar-value">34/40</span>
+                            </div>
+                            <div class="score-bar-progress">
+                                <div class="score-bar-fill" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div class="score-bar-item">
+                            <div class="score-bar-header">
+                                <span class="score-bar-label">有趣度</span>
+                                <span class="score-bar-value">14/20</span>
+                            </div>
+                            <div class="score-bar-progress">
+                                <div class="score-bar-fill" style="width: 70%"></div>
+                            </div>
+                        </div>
+                        <div class="score-bar-item">
+                            <div class="score-bar-header">
+                                <span class="score-bar-label">生活有用度</span>
+                                <span class="score-bar-value">19/20</span>
+                            </div>
+                            <div class="score-bar-progress">
+                                <div class="score-bar-fill" style="width: 95%"></div>
+                            </div>
+                        </div>
+                        <div class="score-bar-item">
+                            <div class="score-bar-header">
+                                <span class="score-bar-label">生产容易度</span>
+                                <span class="score-bar-value">15/20</span>
+                            </div>
+                            <div class="score-bar-progress">
+                                <div class="score-bar-fill" style="width: 75%"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="analysis-section">
+                        <h4>分数分析</h4>
+                        <p>中国儿童近视率53.6%，脊柱问题率68%，功能性儿童学习用品市场达238亿元。学业压力导致的健康问题引发家长高度关注。该产品切中刚需，技术成熟，有明确使用场景，符合"双减"后家庭学习时间增长的趋势。</p>
+                    </div>
+
+                    <div class="research-summary">
+                        <h4>🔍 背景研究</h4>
+                        <ul>
+                            <li><strong>社交媒体:</strong> 学生猝死案例引发社会广泛关注，家长对孩子作业压力、睡眠不足问题极度担忧</li>
+                            <li><strong>新闻背景:</strong> 多起学生因作业压力过大导致健康问题的案例，2015年南阳15岁男孩连续熬夜写作业后课堂猝死，引发700万网友关注</li>
+                            <li><strong>用户洞察:</strong> 功能性儿童学习用品市场超100亿，购买决策者为31-40岁高学历高收入母亲，健康功能是核心需求，护眼灯市场增长迅速</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Product 5 -->
+                <div class="product-card good" data-score="65" data-tier="good">
+                    <div class="trend-info">
+                        <h2 class="trend-title">王鹤棣演唱会</h2>
+                        <div class="trend-meta">
+                            <span class="badge badge-rank">#5</span>
+                            <span class="badge badge-heat">热度: 97,588</span>
+                            <span class="badge badge-tag">演出</span>
+                        </div>
+                    </div>
+
+                    <div class="product-header">
+                        <h3 class="product-name">🎤 明星演唱会应援棒定制化套装</h3>
+                        <div class="score-display">
+                            <div class="total-score">65/100</div>
+                            <span class="score-badge good">⭐ 良好</span>
+                        </div>
+                    </div>
+
+                    <div class="product-details">
+                        <div class="detail-item">
+                            <div class="detail-label">市场赛道</div>
+                            <div>粉丝周边经济</div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="detail-label">目标人群</div>
+                            <div>18-35岁追星族、粉丝后援会</div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="detail-label">生产特点</div>
+                            <div>LED组装+丝印，MOQ 5000支，单价8-25元</div>
+                        </div>
+                    </div>
+
+                    <div class="detail-item" style="margin-bottom: 20px;">
+                        <div class="detail-label">产品描述</div>
+                        <div>可定制明星名字、应援口号、粉丝团标志的LED应援棒。支持多种闪烁模式、蓝牙同步、声控互动。套装包含手幅、贴纸、徽章等周边。瞄准演唱会、生日会、机场接送等场景，激发粉丝购买欲。</div>
+                    </div>
+
+                    <div class="score-breakdown">
+                        <h4>📊 评分详情</h4>
+                        <div class="score-bar-item">
+                            <div class="score-bar-header">
+                                <span class="score-bar-label">可发展度</span>
+                                <span class="score-bar-value">24/40</span>
+                            </div>
+                            <div class="score-bar-progress">
+                                <div class="score-bar-fill" style="width: 60%"></div>
+                            </div>
+                        </div>
+                        <div class="score-bar-item">
+                            <div class="score-bar-header">
+                                <span class="score-bar-label">有趣度</span>
+                                <span class="score-bar-value">16/20</span>
+                            </div>
+                            <div class="score-bar-progress">
+                                <div class="score-bar-fill" style="width: 80%"></div>
+                            </div>
+                        </div>
+                        <div class="score-bar-item">
+                            <div class="score-bar-header">
+                                <span class="score-bar-label">生活有用度</span>
+                                <span class="score-bar-value">10/20</span>
+                            </div>
+                            <div class="score-bar-progress">
+                                <div class="score-bar-fill" style="width: 50%"></div>
+                            </div>
+                        </div>
+                        <div class="score-bar-item">
+                            <div class="score-bar-header">
+                                <span class="score-bar-label">生产容易度</span>
+                                <span class="score-bar-value">15/20</span>
+                            </div>
+                            <div class="score-bar-progress">
+                                <div class="score-bar-fill" style="width: 75%"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="analysis-section">
+                        <h4>分数分析</h4>
+                        <p>粉丝经济市场庞大，但竞争激烈且依赖明星热度。王鹤棣演唱会话题热度高，短期内有销售机会。但存在版权风险、市场饱和、明星形象波动等问题。生产成本低，利润可观，适合快速进入快速退出策略。</p>
+                    </div>
+
+                    <div class="research-summary">
+                        <h4>🔍 背景研究</h4>
+                        <ul>
+                            <li><strong>社交媒体:</strong> 王鹤棣演唱会引发粉丝热议，但也存在票价争议，粉丝购买力分化明显</li>
+                            <li><strong>新闻背景:</strong> 演员跨界开演唱会成趋势，背后是粉丝经济驱动，但也面临"割韭菜"质疑，需要平衡商业价值与粉丝感情</li>
+                            <li><strong>用户洞察:</strong> 粉丝愿意为偶像周边买单，但对品质要求提高，品牌合作周边效果优于普通产品，需要创意和质量双重保障</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Product 6 -->
+                <div class="product-card good" data-score="70" data-tier="good">
+                    <div class="trend-info">
+                        <h2 class="trend-title">米兰男装周</h2>
+                        <div class="trend-meta">
+                            <span class="badge badge-rank">#6</span>
+                            <span class="badge badge-heat">热度: 95,332</span>
+                        </div>
+                    </div>
+
+                    <div class="product-header">
+                        <h3 class="product-name">👔 国潮男装设计师联名T恤系列</h3>
+                        <div class="score-display">
+                            <div class="total-score">70/100</div>
+                            <span class="score-badge good">⭐ 良好</span>
+                        </div>
+                    </div>
+
+                    <div class="product-details">
+                        <div class="detail-item">
+                            <div class="detail-label">市场赛道</div>
+                            <div>国潮男装时尚</div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="detail-label">目标人群</div>
+                            <div>25-40岁时尚男性、潮流爱好者</div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="detail-label">生产特点</div>
+                            <div>数码印花+剪裁，MOQ 500件，单价80-200元</div>
+                        </div>
+                    </div>
+
+                    <div class="detail-item" style="margin-bottom: 20px;">
+                        <div class="detail-label">产品描述</div>
+                        <div>结合米兰时装周元素与中国传统文化，推出限量联名T恤。融入水墨、书法、非遗图案等国潮元素，采用高品质面料和精细剪裁。通过小红书、抖音等社交平台营销,打造"中国设计走向世界"的故事性。</div>
+                    </div>
+
+                    <div class="score-breakdown">
+                        <h4>📊 评分详情</h4>
+                        <div class="score-bar-item">
+                            <div class="score-bar-header">
+                                <span class="score-bar-label">可发展度</span>
+                                <span class="score-bar-value">28/40</span>
+                            </div>
+                            <div class="score-bar-progress">
+                                <div class="score-bar-fill" style="width: 70%"></div>
+                            </div>
+                        </div>
+                        <div class="score-bar-item">
+                            <div class="score-bar-header">
+                                <span class="score-bar-label">有趣度</span>
+                                <span class="score-bar-value">17/20</span>
+                            </div>
+                            <div class="score-bar-progress">
+                                <div class="score-bar-fill" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div class="score-bar-item">
+                            <div class="score-bar-header">
+                                <span class="score-bar-label">生活有用度</span>
+                                <span class="score-bar-value">14/20</span>
+                            </div>
+                            <div class="score-bar-progress">
+                                <div class="score-bar-fill" style="width: 70%"></div>
+                            </div>
+                        </div>
+                        <div class="score-bar-item">
+                            <div class="score-bar-header">
+                                <span class="score-bar-label">生产容易度</span>
+                                <span class="score-bar-value">11/20</span>
+                            </div>
+                            <div class="score-bar-progress">
+                                <div class="score-bar-fill" style="width: 55%"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="analysis-section">
+                        <h4>分数分析</h4>
+                        <p>国潮男装市场持续升温，消费者对个性化、设计感产品需求增长。米兰男装周话题具备时尚背书。但服装市场竞争极度激烈，需要强设计能力和品牌运营。小批量生产成本较高，需精准定位细分市场。</p>
+                    </div>
+
+                    <div class="research-summary">
+                        <h4>🔍 背景研究</h4>
+                        <ul>
+                            <li><strong>社交媒体:</strong> 2026秋冬米兰男装周正在进行中，Ralph Lauren重返、Stone Island首秀等话题引发关注</li>
+                            <li><strong>新闻背景:</strong> 2026年1月16-20日举办76项活动，18场线下秀，多个国际大牌参展，融入冬奥主题，虽行业面临挑战但生命力仍在</li>
+                            <li><strong>用户洞察:</strong> 男装市场向个性化、时尚化发展，消费者关注品质和设计感，国潮品牌崛起，但需要差异化定位和强运营能力</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Product 7 -->
+                <div class="product-card good" data-score="68" data-tier="good">
+                    <div class="trend-info">
+                        <h2 class="trend-title">U23国足首进亚洲杯4强</h2>
+                        <div class="trend-meta">
+                            <span class="badge badge-rank">#7</span>
+                            <span class="badge badge-heat">热度: 66,494</span>
+                        </div>
+                    </div>
+
+                    <div class="product-header">
+                        <h3 class="product-name">⚽ 国足纪念版足球+励志海报套装</h3>
+                        <div class="score-display">
+                            <div class="total-score">68/100</div>
+                            <span class="score-badge good">⭐ 良好</span>
+                        </div>
+                    </div>
+
+                    <div class="product-details">
+                        <div class="detail-item">
+                            <div class="detail-label">市场赛道</div>
+                            <div>体育纪念品</div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="detail-label">目标人群</div>
+                            <div>足球迷、爱国球迷、青少年球员</div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="detail-label">生产特点</div>
+                            <div>足球缝制+印刷海报，MOQ 2000套，单价50-120元</div>
+                        </div>
+                    </div>
+
+                    <div class="detail-item" style="margin-bottom: 20px;">
+                        <div class="detail-label">产品描述</div>
+                        <div>U23国足历史性突破纪念套装，包含印有"首进4强"标识的足球、球星卡、励志海报、赛事回顾手册。强调"突破自我、创造历史"主题，适合收藏和激励青少年球员。可通过电商、体育用品店、足球俱乐部销售。</div>
+                    </div>
+
+                    <div class="score-breakdown">
+                        <h4>📊 评分详情</h4>
+                        <div class="score-bar-item">
+                            <div class="score-bar-header">
+                                <span class="score-bar-label">可发展度</span>
+                                <span class="score-bar-value">25/40</span>
+                            </div>
+                            <div class="score-bar-progress">
+                                <div class="score-bar-fill" style="width: 62.5%"></div>
+                            </div>
+                        </div>
+                        <div class="score-bar-item">
+                            <div class="score-bar-header">
+                                <span class="score-bar-label">有趣度</span>
+                                <span class="score-bar-value">15/20</span>
+                            </div>
+                            <div class="score-bar-progress">
+                                <div class="score-bar-fill" style="width: 75%"></div>
+                            </div>
+                        </div>
+                        <div class="score-bar-item">
+                            <div class="score-bar-header">
+                                <span class="score-bar-label">生活有用度</span>
+                                <span class="score-bar-value">13/20</span>
+                            </div>
+                            <div class="score-bar-progress">
+                                <div class="score-bar-fill" style="width: 65%"></div>
+                            </div>
+                        </div>
+                        <div class="score-bar-item">
+                            <div class="score-bar-header">
+                                <span class="score-bar-label">生产容易度</span>
+                                <span class="score-bar-value">15/20</span>
+                            </div>
+                            <div class="score-bar-progress">
+                                <div class="score-bar-fill" style="width: 75%"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="analysis-section">
+                        <h4>分数分析</h4>
+                        <p>U23国足历史性突破激发球迷情绪，但中国足球周边市场不成熟，消费习惯待培养。优势是生产成本低、技术门槛低。需抓住热点窗口期快速推出，并注重情感营销。可参考冰城队直播卖货模式。</p>
+                    </div>
+
+                    <div class="research-summary">
+                        <h4>🔍 背景研究</h4>
+                        <ul>
+                            <li><strong>社交媒体:</strong> U23国足点球大战战胜乌兹别克斯坦，首次晋级亚洲杯4强，李昊8次扑救成为英雄，刷新多项历史纪录</li>
+                            <li><strong>新闻背景:</strong> 这是中国U23男足历史首次进入亚洲杯四强，成为本届赛事唯一0丢球球队，创造历史性突破</li>
+                            <li><strong>用户洞察:</strong> 中国足球周边市场落后，中超球队年度球衣销量不过万，但个别成功案例如冰城队单场3万元、线上20万元净利润证明市场潜力</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Product 8 -->
+                <div class="product-card other" data-score="55" data-tier="other">
+                    <div class="trend-info">
+                        <h2 class="trend-title">肖稚宇胡羞在一起了</h2>
+                        <div class="trend-meta">
+                            <span class="badge badge-rank">#8</span>
+                            <span class="badge badge-heat">热度: 62,934</span>
+                            <span class="badge badge-tag">剧集</span>
+                        </div>
+                    </div>
+
+                    <div class="product-header">
+                        <h3 class="product-name">💕 CP主题情侣钥匙扣盲盒</h3>
+                        <div class="score-display">
+                            <div class="total-score">55/100</div>
+                            <span class="score-badge other">📋 其他</span>
+                        </div>
+                    </div>
+
+                    <div class="product-details">
+                        <div class="detail-item">
+                            <div class="detail-label">市场赛道</div>
+                            <div>影视周边饰品</div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="detail-label">目标人群</div>
+                            <div>18-28岁磕CP族、剧粉</div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="detail-label">生产特点</div>
+                            <div>树脂注模+电镀，MOQ 5000个，单价5-15元</div>
+                        </div>
+                    </div>
+
+                    <div class="detail-item" style="margin-bottom: 20px;">
+                        <div class="detail-label">产品描述</div>
+                        <div>《轧戏》CP角色主题钥匙扣盲盒，包含角色Q版形象、经典台词、剧情彩蛋等设计元素。采用盲盒模式增加收集乐趣，隐藏款设计提升稀缺性。适合淘宝、拼多多、线下展会销售。</div>
+                    </div>
+
+                    <div class="score-breakdown">
+                        <h4>📊 评分详情</h4>
+                        <div class="score-bar-item">
+                            <div class="score-bar-header">
+                                <span class="score-bar-label">可发展度</span>
+                                <span class="score-bar-value">18/40</span>
+                            </div>
+                            <div class="score-bar-progress">
+                                <div class="score-bar-fill" style="width: 45%"></div>
+                            </div>
+                        </div>
+                        <div class="score-bar-item">
+                            <div class="score-bar-header">
+                                <span class="score-bar-label">有趣度</span>
+                                <span class="score-bar-value">15/20</span>
+                            </div>
+                            <div class="score-bar-progress">
+                                <div class="score-bar-fill" style="width: 75%"></div>
+                            </div>
+                        </div>
+                        <div class="score-bar-item">
+                            <div class="score-bar-header">
+                                <span class="score-bar-label">生活有用度</span>
+                                <span class="score-bar-value">8/20</span>
+                            </div>
+                            <div class="score-bar-progress">
+                                <div class="score-bar-fill" style="width: 40%"></div>
+                            </div>
+                        </div>
+                        <div class="score-bar-item">
+                            <div class="score-bar-header">
+                                <span class="score-bar-label">生产容易度</span>
+                                <span class="score-bar-value">14/20</span>
+                            </div>
+                            <div class="score-bar-progress">
+                                <div class="score-bar-fill" style="width: 70%"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="analysis-section">
+                        <h4>分数分析</h4>
+                        <p>剧集CP周边市场存在但竞争激烈，热度周期短。该产品成本低，可快速生产，但缺乏长期价值和实用性。建议作为补充产品线，控制库存风险。需注意版权问题，优先选择授权合作。</p>
+                    </div>
+
+                    <div class="research-summary">
+                        <h4>🔍 背景研究</h4>
+                        <ul>
+                            <li><strong>社交媒体:</strong> "嗑了13集你俩终于亲了"等话题登上热搜，剧情CP引发观众热议</li>
+                            <li><strong>新闻背景:</strong> 《轧戏》剧中肖稚宇胡羞CP线成为观众关注焦点，都市爱情剧热度持续</li>
+                            <li><strong>用户洞察:</strong> 磕CP族愿意为喜欢的角色周边买单，但产品需有设计感和质量保障，盲盒形式受年轻人欢迎</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Product 9 -->
+                <div class="product-card other" data-score="58" data-tier="other">
+                    <div class="trend-info">
+                        <h2 class="trend-title">杨幂鹿晗我是证人登顶</h2>
+                        <div class="trend-meta">
+                            <span class="badge badge-rank">#9</span>
+                            <span class="badge badge-heat">热度: 57,602</span>
+                            <span class="badge badge-tag">电影</span>
+                        </div>
+                    </div>
+
+                    <div class="product-header">
+                        <h3 class="product-name">🎬 怀旧电影主题复刻海报</h3>
+                        <div class="score-display">
+                            <div class="total-score">58/100</div>
+                            <span class="score-badge other">📋 其他</span>
+                        </div>
+                    </div>
+
+                    <div class="product-details">
+                        <div class="detail-item">
+                            <div class="detail-label">市场赛道</div>
+                            <div>怀旧影视周边</div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="detail-label">目标人群</div>
+                            <div>90后影迷、杨幂鹿晗粉丝</div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="detail-label">生产特点</div>
+                            <div>高清印刷+装裱，MOQ 1000张，单价15-40元</div>
+                        </div>
+                    </div>
+
+                    <div class="detail-item" style="margin-bottom: 20px;">
+                        <div class="detail-label">产品描述</div>
+                        <div">《我是证人》等怀旧电影复刻海报，采用复古设计风格和优质印刷材料。可制作成画框、明信片、装饰画等形式。瞄准情怀消费市场，适合影迷收藏和房间装饰。</div>
+                    </div>
+
+                    <div class="score-breakdown">
+                        <h4>📊 评分详情</h4>
+                        <div class="score-bar-item">
+                            <div class="score-bar-header">
+                                <span class="score-bar-label">可发展度</span>
+                                <span class="score-bar-value">20/40</span>
+                            </div>
+                            <div class="score-bar-progress">
+                                <div class="score-bar-fill" style="width: 50%"></div>
+                            </div>
+                        </div>
+                        <div class="score-bar-item">
+                            <div class="score-bar-header">
+                                <span class="score-bar-label">有趣度</span>
+                                <span class="score-bar-value">13/20</span>
+                            </div>
+                            <div class="score-bar-progress">
+                                <div class="score-bar-fill" style="width: 65%"></div>
+                            </div>
+                        </div>
+                        <div class="score-bar-item">
+                            <div class="score-bar-header">
+                                <span class="score-bar-label">生活有用度</span>
+                                <span class="score-bar-value">10/20</span>
+                            </div>
+                            <div class="score-bar-progress">
+                                <div class="score-bar-fill" style="width: 50%"></div>
+                            </div>
+                        </div>
+                        <div class="score-bar-item">
+                            <div class="score-bar-header">
+                                <span class="score-bar-label">生产容易度</span>
+                                <span class="score-bar-value">15/20</span>
+                            </div>
+                            <div class="score-bar-progress">
+                                <div class="score-bar-fill" style="width: 75%"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="analysis-section">
+                        <h4>分数分析</h4>
+                        <p>怀旧电影话题热度有限，市场规模较小。优势是生产简单、成本低。但需要版权授权，且受众群体窄。建议作为小众产品测试市场，或结合其他热门电影打造系列产品。</p>
+                    </div>
+
+                    <div class="research-summary">
+                        <h4>🔍 背景研究</h4>
+                        <ul>
+                            <li><strong>社交媒体:</strong> 《我是证人》重新登顶话题榜，杨幂鹿晗合作引发怀旧情绪</li>
+                            <li><strong>新闻背景:</strong> 2015年上映的悬疑片《我是证人》因某些原因重新受到关注，登顶热搜</li>
+                            <li><strong>用户洞察:</strong> 怀旧情怀有一定市场，但需要强IP和情感联结，单一电影周边市场有限</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Product 10 -->
+                <div class="product-card good" data-score="77" data-tier="good">
+                    <div class="trend-info">
+                        <h2 class="trend-title">卸妆油洗头</h2>
+                        <div class="trend-meta">
+                            <span class="badge badge-rank">#10</span>
+                            <span class="badge badge-heat">热度: 51,955</span>
+                        </div>
+                    </div>
+
+                    <div class="product-header">
+                        <h3 class="product-name">💆 专业头皮深层清洁卸妆油</h3>
+                        <div class="score-display">
+                            <div class="total-score">77/100</div>
+                            <span class="score-badge good">⭐ 良好</span>
+                        </div>
+                    </div>
+
+                    <div class="product-details">
+                        <div class="detail-item">
+                            <div class="detail-label">市场赛道</div>
+                            <div>头皮护理美容产品</div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="detail-label">目标人群</div>
+                            <div>20-40岁女性、油性头皮人群、美容达人</div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="detail-label">生产特点</div>
+                            <div>OEM代工+包装设计，MOQ 3000瓶，单价30-80元</div>
+                        </div>
+                    </div>
+
+                    <div class="detail-item" style="margin-bottom: 20px;">
+                        <div class="detail-label">产品描述</div>
+                        <div>针对"卸妆油洗头"话题热度，开发专门的头皮清洁油。采用温和植物油基底+头皮友好配方，区别于普通卸妆油。强调"油溶油"深层清洁、去油控油、舒缓头皮功效。通过小红书、抖音KOL种草，打造专业头皮护理新品类。</div>
+                    </div>
+
+                    <div class="score-breakdown">
+                        <h4>📊 评分详情</h4>
+                        <div class="score-bar-item">
+                            <div class="score-bar-header">
+                                <span class="score-bar-label">可发展度</span>
+                                <span class="score-bar-value">30/40</span>
+                            </div>
+                            <div class="score-bar-progress">
+                                <div class="score-bar-fill" style="width: 75%"></div>
+                            </div>
+                        </div>
+                        <div class="score-bar-item">
+                            <div class="score-bar-header">
+                                <span class="score-bar-label">有趣度</span>
+                                <span class="score-bar-value">16/20</span>
+                            </div>
+                            <div class="score-bar-progress">
+                                <div class="score-bar-fill" style="width: 80%"></div>
+                            </div>
+                        </div>
+                        <div class="score-bar-item">
+                            <div class="score-bar-header">
+                                <span class="score-bar-label">生活有用度</span>
+                                <span class="score-bar-value">17/20</span>
+                            </div>
+                            <div class="score-bar-progress">
+                                <div class="score-bar-fill" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div class="score-bar-item">
+                            <div class="score-bar-header">
+                                <span class="score-bar-label">生产容易度</span>
+                                <span class="score-bar-value">14/20</span>
+                            </div>
+                            <div class="score-bar-progress">
+                                <div class="score-bar-fill" style="width: 70%"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="analysis-section">
+                        <h4>分数分析</h4>
+                        <p>头皮护理市场规模超300亿且高速增长，"护肤式护发"理念深入人心。虽然专家不建议用卸妆油洗头，但可开发专业头皮清洁油，抢占"头皮卸妆"新品类。需要研发投入和成分安全认证，但市场潜力大，毛利高。</p>
+                    </div>
+
+                    <div class="research-summary">
+                        <h4>🔍 背景研究</h4>
+                        <ul>
+                            <li><strong>社交媒体:</strong> "卸妆油洗头"成为美容博主讨论热点,但专家警告可能损伤头皮屏障</li>
+                            <li><strong>新闻背景:</strong> 网络上流行用卸妆油洗头的做法，声称可以缓解油头、去屑，但皮肤科专家表示风险较大，建议使用专业头皮护理产品</li>
+                            <li><strong>用户洞察:</strong> 头皮护理市场2022年达200亿，预计2025年超300亿，消费者从关注转向行动，80%定期做头皮护理，头皮精华占93.34%市场份额</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <div class="disclaimer">
+                <h3>⚠️ 免责声明</h3>
+                <p>本报告基于微博热搜数据和公开信息自动生成，产品创意和评分仅供参考。实际产品开发前请务必进行深入市场调研、可行性分析和法律合规审查。热搜话题变化快，市场环境复杂，投资需谨慎。</p>
+            </div>
+            <div style="margin-top: 20px;">
+                <p><strong>数据来源:</strong> 微博热搜 API (TianAPI)</p>
+                <p><strong>分析工具:</strong> Claude Code - Weibo Trends Analyzer v1.2</p>
+                <p><strong>生成时间:</strong> 2026-01-17</p>
+                <p style="margin-top: 15px; opacity: 0.8;">🤖 Generated with Claude Code | Powered by Anthropic</p>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        // Search functionality
+        const searchInput = document.getElementById('searchInput');
+        const productCards = document.querySelectorAll('.product-card');
+        const filterBtns = document.querySelectorAll('.filter-btn');
+
+        searchInput.addEventListener('input', (e) => {
+            const searchTerm = e.target.value.toLowerCase();
+            productCards.forEach(card => {
+                const text = card.textContent.toLowerCase();
+                card.style.display = text.includes(searchTerm) ? 'block' : 'none';
+            });
+        });
+
+        // Filter functionality
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Update active state
+                filterBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+
+                const filter = btn.dataset.filter;
+                productCards.forEach(card => {
+                    if (filter === 'all') {
+                        card.style.display = 'block';
+                    } else {
+                        card.style.display = card.dataset.tier === filter ? 'block' : 'none';
+                    }
+                });
+            });
+        });
+
+        // Animate score bars on load
+        window.addEventListener('load', () => {
+            const scoreBars = document.querySelectorAll('.score-bar-fill');
+            scoreBars.forEach(bar => {
+                const width = bar.style.width;
+                bar.style.width = '0';
+                setTimeout(() => {
+                    bar.style.width = width;
+                }, 100);
+            });
+        });
+    </script>
+</body>
+</html>
