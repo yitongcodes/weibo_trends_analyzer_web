@@ -1,11 +1,11 @@
 {
   "metadata": {
-    "generated_at": "2026年01月17日 19:32:14",
-    "total_analyzed": 10,
+    "generated_at": "2026年01月17日 19:53:12",
+    "total_analyzed": 8,
     "average_score": 50.0,
     "excellent_count": 0,
     "good_count": 0,
-    "other_count": 10
+    "other_count": 8
   },
   "products": {
     "excellent": [],
@@ -14,7 +14,7 @@
       {
         "keyword": "轧戏",
         "rank": 1,
-        "heat_value": 92998,
+        "heat_value": 86796,
         "tag": "",
         "category": "剧集",
         "product_name": "轧戏主题商品",
@@ -43,7 +43,7 @@
       {
         "keyword": "涨20元月薪公司已连续37年涨薪",
         "rank": 2,
-        "heat_value": 76523,
+        "heat_value": 68718,
         "tag": "热",
         "category": "",
         "product_name": "涨20元月薪公司已连续37年涨薪主题商品",
@@ -72,7 +72,7 @@
       {
         "keyword": "冰雪热力中的中国经济新脉动",
         "rank": 3,
-        "heat_value": 66967,
+        "heat_value": 56432,
         "tag": "",
         "category": "",
         "product_name": "冰雪热力中的中国经济新脉动主题商品",
@@ -99,9 +99,38 @@
         "tier_class": "other"
       },
       {
-        "keyword": "男孩凌晨5点起床写作业突然晕倒",
+        "keyword": "飞鹤迹萃率先实现新鲜原料可追溯",
         "rank": 4,
-        "heat_value": 64868,
+        "heat_value": 0,
+        "tag": "",
+        "category": "",
+        "product_name": "飞鹤迹萃率先实现新鲜原料可追溯主题商品",
+        "market_category": "文创产品",
+        "target_audience": "18-35岁年轻人群",
+        "description": "基于热搜话题'飞鹤迹萃率先实现新鲜原料可追溯'的创意产品",
+        "manufacturing_details": "小批量生产，待进一步分析",
+        "score_breakdown": {
+          "development_potential": 20,
+          "interest_level": 10,
+          "life_utility": 10,
+          "production_ease": 10
+        },
+        "total_score": 50,
+        "score_justification": "⚠️ AI分析失败，使用默认评分",
+        "research_summary": {
+          "social_media": "⚠️ 搜索结果受限",
+          "news_background": "⚠️ 搜索结果受限",
+          "user_insights": "⚠️ 搜索结果受限",
+          "market_potential": "基于通用市场分析"
+        },
+        "tier_name": "其他",
+        "tier_badge": "📋 其他",
+        "tier_class": "other"
+      },
+      {
+        "keyword": "男孩凌晨5点起床写作业突然晕倒",
+        "rank": 5,
+        "heat_value": 55262,
         "tag": "",
         "category": "",
         "product_name": "男孩凌晨5点起床写作业突然晕倒主题商品",
@@ -129,9 +158,9 @@
       },
       {
         "keyword": "王鹤棣演唱会",
-        "rank": 5,
-        "heat_value": 63350,
-        "tag": "",
+        "rank": 6,
+        "heat_value": 55029,
+        "tag": "重磅",
         "category": "演出",
         "product_name": "王鹤棣演唱会主题商品",
         "market_category": "文创产品",
@@ -158,9 +187,9 @@
       },
       {
         "keyword": "米兰男装周",
-        "rank": 6,
-        "heat_value": 60147,
-        "tag": "热",
+        "rank": 7,
+        "heat_value": 53857,
+        "tag": "",
         "category": "",
         "product_name": "米兰男装周主题商品",
         "market_category": "文创产品",
@@ -186,102 +215,15 @@
         "tier_class": "other"
       },
       {
-        "keyword": "U23国足首进亚洲杯4强",
-        "rank": 7,
-        "heat_value": 41296,
-        "tag": "",
-        "category": "",
-        "product_name": "U23国足首进亚洲杯4强主题商品",
-        "market_category": "文创产品",
-        "target_audience": "18-35岁年轻人群",
-        "description": "基于热搜话题'U23国足首进亚洲杯4强'的创意产品",
-        "manufacturing_details": "小批量生产，待进一步分析",
-        "score_breakdown": {
-          "development_potential": 20,
-          "interest_level": 10,
-          "life_utility": 10,
-          "production_ease": 10
-        },
-        "total_score": 50,
-        "score_justification": "⚠️ AI分析失败，使用默认评分",
-        "research_summary": {
-          "social_media": "⚠️ 搜索结果受限",
-          "news_background": "⚠️ 搜索结果受限",
-          "user_insights": "⚠️ 搜索结果受限",
-          "market_potential": "基于通用市场分析"
-        },
-        "tier_name": "其他",
-        "tier_badge": "📋 其他",
-        "tier_class": "other"
-      },
-      {
-        "keyword": "卸妆油洗头",
+        "keyword": "苦瓜桑叶片根治糖尿病是谣言",
         "rank": 8,
-        "heat_value": 34924,
-        "tag": "",
+        "heat_value": 0,
+        "tag": "热",
         "category": "",
-        "product_name": "卸妆油洗头主题商品",
+        "product_name": "苦瓜桑叶片根治糖尿病是谣言主题商品",
         "market_category": "文创产品",
         "target_audience": "18-35岁年轻人群",
-        "description": "基于热搜话题'卸妆油洗头'的创意产品",
-        "manufacturing_details": "小批量生产，待进一步分析",
-        "score_breakdown": {
-          "development_potential": 20,
-          "interest_level": 10,
-          "life_utility": 10,
-          "production_ease": 10
-        },
-        "total_score": 50,
-        "score_justification": "⚠️ AI分析失败，使用默认评分",
-        "research_summary": {
-          "social_media": "⚠️ 搜索结果受限",
-          "news_background": "⚠️ 搜索结果受限",
-          "user_insights": "⚠️ 搜索结果受限",
-          "market_potential": "基于通用市场分析"
-        },
-        "tier_name": "其他",
-        "tier_badge": "📋 其他",
-        "tier_class": "other"
-      },
-      {
-        "keyword": "杨幂鹿晗我是证人登顶",
-        "rank": 9,
-        "heat_value": 34727,
-        "tag": "",
-        "category": "电影",
-        "product_name": "杨幂鹿晗我是证人登顶主题商品",
-        "market_category": "文创产品",
-        "target_audience": "18-35岁年轻人群",
-        "description": "基于热搜话题'杨幂鹿晗我是证人登顶'的创意产品",
-        "manufacturing_details": "小批量生产，待进一步分析",
-        "score_breakdown": {
-          "development_potential": 20,
-          "interest_level": 10,
-          "life_utility": 10,
-          "production_ease": 10
-        },
-        "total_score": 50,
-        "score_justification": "⚠️ AI分析失败，使用默认评分",
-        "research_summary": {
-          "social_media": "⚠️ 搜索结果受限",
-          "news_background": "⚠️ 搜索结果受限",
-          "user_insights": "⚠️ 搜索结果受限",
-          "market_potential": "基于通用市场分析"
-        },
-        "tier_name": "其他",
-        "tier_badge": "📋 其他",
-        "tier_class": "other"
-      },
-      {
-        "keyword": "家中凌晨进贼女子全程装睡",
-        "rank": 10,
-        "heat_value": 34248,
-        "tag": "沸",
-        "category": "",
-        "product_name": "家中凌晨进贼女子全程装睡主题商品",
-        "market_category": "文创产品",
-        "target_audience": "18-35岁年轻人群",
-        "description": "基于热搜话题'家中凌晨进贼女子全程装睡'的创意产品",
+        "description": "基于热搜话题'苦瓜桑叶片根治糖尿病是谣言'的创意产品",
         "manufacturing_details": "小批量生产，待进一步分析",
         "score_breakdown": {
           "development_potential": 20,
@@ -307,7 +249,7 @@
     {
       "keyword": "轧戏",
       "rank": 1,
-      "heat_value": 92998,
+      "heat_value": 86796,
       "tag": "",
       "category": "剧集",
       "product_name": "轧戏主题商品",
@@ -336,7 +278,7 @@
     {
       "keyword": "涨20元月薪公司已连续37年涨薪",
       "rank": 2,
-      "heat_value": 76523,
+      "heat_value": 68718,
       "tag": "热",
       "category": "",
       "product_name": "涨20元月薪公司已连续37年涨薪主题商品",
@@ -365,7 +307,7 @@
     {
       "keyword": "冰雪热力中的中国经济新脉动",
       "rank": 3,
-      "heat_value": 66967,
+      "heat_value": 56432,
       "tag": "",
       "category": "",
       "product_name": "冰雪热力中的中国经济新脉动主题商品",
@@ -392,9 +334,38 @@
       "tier_class": "other"
     },
     {
-      "keyword": "男孩凌晨5点起床写作业突然晕倒",
+      "keyword": "飞鹤迹萃率先实现新鲜原料可追溯",
       "rank": 4,
-      "heat_value": 64868,
+      "heat_value": 0,
+      "tag": "",
+      "category": "",
+      "product_name": "飞鹤迹萃率先实现新鲜原料可追溯主题商品",
+      "market_category": "文创产品",
+      "target_audience": "18-35岁年轻人群",
+      "description": "基于热搜话题'飞鹤迹萃率先实现新鲜原料可追溯'的创意产品",
+      "manufacturing_details": "小批量生产，待进一步分析",
+      "score_breakdown": {
+        "development_potential": 20,
+        "interest_level": 10,
+        "life_utility": 10,
+        "production_ease": 10
+      },
+      "total_score": 50,
+      "score_justification": "⚠️ AI分析失败，使用默认评分",
+      "research_summary": {
+        "social_media": "⚠️ 搜索结果受限",
+        "news_background": "⚠️ 搜索结果受限",
+        "user_insights": "⚠️ 搜索结果受限",
+        "market_potential": "基于通用市场分析"
+      },
+      "tier_name": "其他",
+      "tier_badge": "📋 其他",
+      "tier_class": "other"
+    },
+    {
+      "keyword": "男孩凌晨5点起床写作业突然晕倒",
+      "rank": 5,
+      "heat_value": 55262,
       "tag": "",
       "category": "",
       "product_name": "男孩凌晨5点起床写作业突然晕倒主题商品",
@@ -422,9 +393,9 @@
     },
     {
       "keyword": "王鹤棣演唱会",
-      "rank": 5,
-      "heat_value": 63350,
-      "tag": "",
+      "rank": 6,
+      "heat_value": 55029,
+      "tag": "重磅",
       "category": "演出",
       "product_name": "王鹤棣演唱会主题商品",
       "market_category": "文创产品",
@@ -451,9 +422,9 @@
     },
     {
       "keyword": "米兰男装周",
-      "rank": 6,
-      "heat_value": 60147,
-      "tag": "热",
+      "rank": 7,
+      "heat_value": 53857,
+      "tag": "",
       "category": "",
       "product_name": "米兰男装周主题商品",
       "market_category": "文创产品",
@@ -479,102 +450,15 @@
       "tier_class": "other"
     },
     {
-      "keyword": "U23国足首进亚洲杯4强",
-      "rank": 7,
-      "heat_value": 41296,
-      "tag": "",
-      "category": "",
-      "product_name": "U23国足首进亚洲杯4强主题商品",
-      "market_category": "文创产品",
-      "target_audience": "18-35岁年轻人群",
-      "description": "基于热搜话题'U23国足首进亚洲杯4强'的创意产品",
-      "manufacturing_details": "小批量生产，待进一步分析",
-      "score_breakdown": {
-        "development_potential": 20,
-        "interest_level": 10,
-        "life_utility": 10,
-        "production_ease": 10
-      },
-      "total_score": 50,
-      "score_justification": "⚠️ AI分析失败，使用默认评分",
-      "research_summary": {
-        "social_media": "⚠️ 搜索结果受限",
-        "news_background": "⚠️ 搜索结果受限",
-        "user_insights": "⚠️ 搜索结果受限",
-        "market_potential": "基于通用市场分析"
-      },
-      "tier_name": "其他",
-      "tier_badge": "📋 其他",
-      "tier_class": "other"
-    },
-    {
-      "keyword": "卸妆油洗头",
+      "keyword": "苦瓜桑叶片根治糖尿病是谣言",
       "rank": 8,
-      "heat_value": 34924,
-      "tag": "",
+      "heat_value": 0,
+      "tag": "热",
       "category": "",
-      "product_name": "卸妆油洗头主题商品",
+      "product_name": "苦瓜桑叶片根治糖尿病是谣言主题商品",
       "market_category": "文创产品",
       "target_audience": "18-35岁年轻人群",
-      "description": "基于热搜话题'卸妆油洗头'的创意产品",
-      "manufacturing_details": "小批量生产，待进一步分析",
-      "score_breakdown": {
-        "development_potential": 20,
-        "interest_level": 10,
-        "life_utility": 10,
-        "production_ease": 10
-      },
-      "total_score": 50,
-      "score_justification": "⚠️ AI分析失败，使用默认评分",
-      "research_summary": {
-        "social_media": "⚠️ 搜索结果受限",
-        "news_background": "⚠️ 搜索结果受限",
-        "user_insights": "⚠️ 搜索结果受限",
-        "market_potential": "基于通用市场分析"
-      },
-      "tier_name": "其他",
-      "tier_badge": "📋 其他",
-      "tier_class": "other"
-    },
-    {
-      "keyword": "杨幂鹿晗我是证人登顶",
-      "rank": 9,
-      "heat_value": 34727,
-      "tag": "",
-      "category": "电影",
-      "product_name": "杨幂鹿晗我是证人登顶主题商品",
-      "market_category": "文创产品",
-      "target_audience": "18-35岁年轻人群",
-      "description": "基于热搜话题'杨幂鹿晗我是证人登顶'的创意产品",
-      "manufacturing_details": "小批量生产，待进一步分析",
-      "score_breakdown": {
-        "development_potential": 20,
-        "interest_level": 10,
-        "life_utility": 10,
-        "production_ease": 10
-      },
-      "total_score": 50,
-      "score_justification": "⚠️ AI分析失败，使用默认评分",
-      "research_summary": {
-        "social_media": "⚠️ 搜索结果受限",
-        "news_background": "⚠️ 搜索结果受限",
-        "user_insights": "⚠️ 搜索结果受限",
-        "market_potential": "基于通用市场分析"
-      },
-      "tier_name": "其他",
-      "tier_badge": "📋 其他",
-      "tier_class": "other"
-    },
-    {
-      "keyword": "家中凌晨进贼女子全程装睡",
-      "rank": 10,
-      "heat_value": 34248,
-      "tag": "沸",
-      "category": "",
-      "product_name": "家中凌晨进贼女子全程装睡主题商品",
-      "market_category": "文创产品",
-      "target_audience": "18-35岁年轻人群",
-      "description": "基于热搜话题'家中凌晨进贼女子全程装睡'的创意产品",
+      "description": "基于热搜话题'苦瓜桑叶片根治糖尿病是谣言'的创意产品",
       "manufacturing_details": "小批量生产，待进一步分析",
       "score_breakdown": {
         "development_potential": 20,
