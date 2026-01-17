@@ -46,16 +46,43 @@
 
 **用途**：调用 Claude Agent SDK 进行 AI 分析
 
+#### 选项 A：官方 Anthropic API（推荐）
+
 **获取步骤**：
 1. 访问 [Anthropic Console](https://console.anthropic.com/)
 2. 注册/登录账号
 3. 进入 API Keys 页面
 4. 点击 "Create Key" 创建新密钥
-5. 复制密钥（格式：`sk-ant-...`）
+5. 复制密钥（格式：`sk-ant-api03-...`）
 
 **定价参考**：
 - Claude 3.5 Sonnet：$3/M tokens (input), $15/M tokens (output)
 - 每次分析约消耗 5-10K tokens，成本约 $0.05-0.15
+
+#### 选项 B：第三方 Claude API（更便宜）
+
+如果你有第三方的 Claude API 代理服务，也可以使用。
+
+**配置方法**：
+1. 获取第三方 API 提供的：
+   - API Key（如：`sk-ant-oat01-...`）
+   - API Base URL（如：`https://code.newcli.com/claude`）
+
+2. 在 GitHub Secrets 中配置：
+   - `ANTHROPIC_API_KEY`：填入第三方提供的 API Key
+   - `ANTHROPIC_BASE_URL`：填入第三方 API 地址
+
+**示例**：
+- API Base URL: `https://code.newcli.com/claude`
+- API Key: `sk-ant-oat01-W-If4jeJz...`（填入你自己的密钥）
+
+**优势**：
+- ✅ 通常价格更便宜
+- ✅ 可能提供更高的免费额度
+
+**注意**：
+- ⚠️ 确保第三方服务可靠
+- ⚠️ 遵守服务条款
 
 **重要提示**：
 - ⚠️ 请妥善保管密钥，不要提交到代码仓库
@@ -145,6 +172,7 @@
 
 | Secret 名称 | 说明 | 默认值 |
 |------------|------|--------|
+| `ANTHROPIC_BASE_URL` | 第三方 Claude API 地址（如使用第三方服务） | - |
 | `SEARCH_ENGINE` | 搜索引擎类型 | `serpapi` |
 | `GOOGLE_SEARCH_ENGINE_ID` | Google 自定义搜索引擎 ID（仅在使用 Google 时需要） | - |
 

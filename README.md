@@ -32,8 +32,10 @@
 
 你需要获取以下 API 密钥：
 
-- **Anthropic API Key** - [获取地址](https://console.anthropic.com/)
-- **天行数据 API Key** - [获取地址](https://www.tianapi.com/)
+- **Claude API Key**
+  - 官方：[Anthropic Console](https://console.anthropic.com/)
+  - 第三方：如果你有第三方 Claude API，请查看 [**第三方 API 配置指南**](THIRD_PARTY_API_SETUP.md)
+- **天行数据 API Key** - [获取地址](https://www.tianapi.com/)（或使用项目内置密钥）
 - **SerpAPI Key** - [获取地址](https://serpapi.com/)（或使用 Google Custom Search）
 
 ### 2. 部署到 GitHub Actions
@@ -114,6 +116,14 @@ weibo-trends-analyzer/
 | `ANTHROPIC_API_KEY` | Claude API 密钥 |
 | `TIANAPI_KEY` | 天行数据 API 密钥 |
 | `SEARCH_API_KEY` | SerpAPI 或 Google API 密钥 |
+
+**可选 Secrets**（使用第三方 Claude API 时需要）：
+
+| Secret 名称 | 说明 |
+|------------|------|
+| `ANTHROPIC_BASE_URL` | 第三方 Claude API 地址 |
+
+> 💡 使用第三方 API？查看 [**第三方 API 配置指南**](THIRD_PARTY_API_SETUP.md)
 
 ## 💰 成本估算
 

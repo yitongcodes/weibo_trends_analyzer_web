@@ -40,14 +40,21 @@ class WeiboTrendsAnalyzer:
         tianapi_key: str,
         search_api_key: str,
         anthropic_api_key: str,
-        search_engine: str = "serpapi"
+        search_engine: str = "serpapi",
+        anthropic_base_url: str = None
     ):
         self.weibo_client = WeiboAPIClient(tianapi_key)
         self.search_client = SearchAPIClient(search_api_key, search_engine)
         self.anthropic_api_key = anthropic_api_key
+        self.anthropic_base_url = anthropic_base_url
 
-        # Set environment variable for Claude SDK
+        # Set environment variables for Claude SDK
         os.environ["ANTHROPIC_API_KEY"] = anthropic_api_key
+
+        # Set custom API base URL if provided (for third-party APIs)
+        if anthropic_base_url:
+            os.environ["ANTHROPIC_BASE_URL"] = anthropic_base_url
+            print(f"✅ Using custom Claude API endpoint: {anthropic_base_url}")
 
     async def analyze_single_topic(
         self,
@@ -317,6 +324,7 @@ async def main():
     tianapi_key = os.getenv("TIANAPI_KEY")
     search_api_key = os.getenv("SEARCH_API_KEY")
     anthropic_api_key = os.getenv("ANTHROPIC_API_KEY")
+    anthropic_base_url = os.getenv("ANTHROPIC_BASE_URL")  # Optional: for third-party APIs
     search_engine = os.getenv("SEARCH_ENGINE", "serpapi")  # serpapi or google
     analysis_limit = int(os.getenv("ANALYSIS_LIMIT", "10"))
 
@@ -331,7 +339,8 @@ async def main():
         tianapi_key=tianapi_key,
         search_api_key=search_api_key,
         anthropic_api_key=anthropic_api_key,
-        search_engine=search_engine
+        search_engine=search_engine,
+        anthropic_base_url=anthropic_base_url
     )
 
     # Run analysis
