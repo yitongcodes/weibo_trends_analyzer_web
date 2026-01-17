@@ -25,6 +25,8 @@ jobs:
 
     permissions:
       contents: write  # 需要写权限以提交报告文件
+      pages: write     # 需要写权限以部署到 GitHub Pages
+      id-token: write  # 需要 ID token 权限用于 Pages 部署
 
     steps:
       - name: 📥 Checkout repository
@@ -58,6 +60,12 @@ jobs:
         run: |
           echo "📄 Generated reports:"
           ls -lh reports/
+
+      - name: 🏠 Generate index.html for GitHub Pages
+        run: |
+          echo "📝 Generating index page..."
+          python scripts/generate_index.py
+          echo "✅ Index page generated"
 
       - name: 💾 Commit and push reports
         run: |
@@ -101,3 +109,25 @@ jobs:
           name: weibo-trends-reports-${{ github.run_number }}
           path: reports/
           retention-days: 30  # 保留 30 天
+
+      - name: 🌐 Setup GitHub Pages
+        uses: actions/configure-pages@v4
+
+      - name: 📦 Upload to GitHub Pages
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: reports/
+
+      - name: 🚀 Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
+
+      - name: 🎉 Deployment summary
+        run: |
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "### 🌐 GitHub Pages Deployment" >> $GITHUB_STEP_SUMMARY
+          echo "✅ Reports deployed to GitHub Pages successfully!" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "🔗 **Public URL**: \`https://yitongcodes.github.io/weibo_trends_analyzer_web/\`" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "📊 View the latest report at: \`https://yitongcodes.github.io/weibo_trends_analyzer_web/index.html\`" >> $GITHUB_STEP_SUMMARY

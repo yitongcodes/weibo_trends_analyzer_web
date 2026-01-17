@@ -65,9 +65,11 @@ git push origin main
 
 报告生成后会自动提交到 `reports/` 目录，可以：
 
+- 🌐 **GitHub Pages 在线查看**（推荐）: `https://yitongcodes.github.io/weibo_trends_analyzer_web/`
 - 📂 直接在 GitHub 浏览
 - 📥 下载 Artifacts 查看
-- 🌐 启用 GitHub Pages 在线查看
+
+> 💡 **配置 GitHub Pages**: 查看 [**GitHub Pages 部署指南**](GITHUB_PAGES_SETUP.md)
 
 ## 📊 示例报告
 
@@ -91,7 +93,9 @@ AI 分析生成产品创意 (Claude Agent SDK)
     ↓
 生成 HTML 报告 (Jinja2 模板)
     ↓
-自动提交到仓库 (Git)
+生成首页索引 (index.html)
+    ↓
+提交到仓库 (Git) + 部署到 GitHub Pages 🌐
 ```
 
 ## 📁 项目结构
@@ -102,10 +106,14 @@ weibo-trends-analyzer/
 ├── scripts/                  # Python 脚本
 │   ├── weibo_analyzer.py    # 主分析脚本
 │   ├── utils.py             # 工具函数
+│   ├── generate_index.py    # 生成首页索引
 │   └── templates/           # HTML 模板
 ├── reports/                  # 生成的报告
+│   ├── index.html           # GitHub Pages 首页
+│   └── weibo-trends-*.html  # 每日报告
 ├── requirements.txt          # Python 依赖
 ├── DEPLOYMENT.md            # 详细部署指南
+├── GITHUB_PAGES_SETUP.md    # GitHub Pages 配置指南
 └── README.md                # 本文件
 ```
 
