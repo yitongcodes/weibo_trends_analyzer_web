@@ -1,0 +1,598 @@
+{
+  "metadata": {
+    "generated_at": "2026年01月22日 03:02:35",
+    "total_analyzed": 10,
+    "average_score": 50.0,
+    "excellent_count": 0,
+    "good_count": 0,
+    "other_count": 10
+  },
+  "products": {
+    "excellent": [],
+    "good": [],
+    "other": [
+      {
+        "keyword": "惊蛰无声定档",
+        "rank": 1,
+        "heat_value": 1262284,
+        "tag": "",
+        "category": "电影",
+        "product_name": "惊蛰无声定档主题商品",
+        "market_category": "文创产品",
+        "target_audience": "18-35岁年轻人群",
+        "description": "基于热搜话题'惊蛰无声定档'的创意产品",
+        "manufacturing_details": "小批量生产，待进一步分析",
+        "score_breakdown": {
+          "development_potential": 20,
+          "interest_level": 10,
+          "life_utility": 10,
+          "production_ease": 10
+        },
+        "total_score": 50,
+        "score_justification": "⚠️ AI分析失败，使用默认评分",
+        "research_summary": {
+          "social_media": "⚠️ 搜索结果受限",
+          "news_background": "⚠️ 搜索结果受限",
+          "user_insights": "⚠️ 搜索结果受限",
+          "market_potential": "基于通用市场分析"
+        },
+        "tier_name": "其他",
+        "tier_badge": "📋 其他",
+        "tier_class": "other"
+      },
+      {
+        "keyword": "考研失败情侣辞职回村7年后翻盘",
+        "rank": 2,
+        "heat_value": 887333,
+        "tag": "新",
+        "category": "",
+        "product_name": "考研失败情侣辞职回村7年后翻盘主题商品",
+        "market_category": "文创产品",
+        "target_audience": "18-35岁年轻人群",
+        "description": "基于热搜话题'考研失败情侣辞职回村7年后翻盘'的创意产品",
+        "manufacturing_details": "小批量生产，待进一步分析",
+        "score_breakdown": {
+          "development_potential": 20,
+          "interest_level": 10,
+          "life_utility": 10,
+          "production_ease": 10
+        },
+        "total_score": 50,
+        "score_justification": "⚠️ AI分析失败，使用默认评分",
+        "research_summary": {
+          "social_media": "⚠️ 搜索结果受限",
+          "news_background": "⚠️ 搜索结果受限",
+          "user_insights": "⚠️ 搜索结果受限",
+          "market_potential": "基于通用市场分析"
+        },
+        "tier_name": "其他",
+        "tier_badge": "📋 其他",
+        "tier_class": "other"
+      },
+      {
+        "keyword": "数读工业和信息化发展新成效",
+        "rank": 3,
+        "heat_value": 717019,
+        "tag": "",
+        "category": "",
+        "product_name": "数读工业和信息化发展新成效主题商品",
+        "market_category": "文创产品",
+        "target_audience": "18-35岁年轻人群",
+        "description": "基于热搜话题'数读工业和信息化发展新成效'的创意产品",
+        "manufacturing_details": "小批量生产，待进一步分析",
+        "score_breakdown": {
+          "development_potential": 20,
+          "interest_level": 10,
+          "life_utility": 10,
+          "production_ease": 10
+        },
+        "total_score": 50,
+        "score_justification": "⚠️ AI分析失败，使用默认评分",
+        "research_summary": {
+          "social_media": "⚠️ 搜索结果受限",
+          "news_background": "⚠️ 搜索结果受限",
+          "user_insights": "⚠️ 搜索结果受限",
+          "market_potential": "基于通用市场分析"
+        },
+        "tier_name": "其他",
+        "tier_badge": "📋 其他",
+        "tier_class": "other"
+      },
+      {
+        "keyword": "程序员猝死当天5次访问公司OA系统",
+        "rank": 4,
+        "heat_value": 681816,
+        "tag": "",
+        "category": "",
+        "product_name": "程序员猝死当天5次访问公司OA系统主题商品",
+        "market_category": "文创产品",
+        "target_audience": "18-35岁年轻人群",
+        "description": "基于热搜话题'程序员猝死当天5次访问公司OA系统'的创意产品",
+        "manufacturing_details": "小批量生产，待进一步分析",
+        "score_breakdown": {
+          "development_potential": 20,
+          "interest_level": 10,
+          "life_utility": 10,
+          "production_ease": 10
+        },
+        "total_score": 50,
+        "score_justification": "⚠️ AI分析失败，使用默认评分",
+        "research_summary": {
+          "social_media": "⚠️ 搜索结果受限",
+          "news_background": "⚠️ 搜索结果受限",
+          "user_insights": "⚠️ 搜索结果受限",
+          "market_potential": "基于通用市场分析"
+        },
+        "tier_name": "其他",
+        "tier_badge": "📋 其他",
+        "tier_class": "other"
+      },
+      {
+        "keyword": "嫁金钗阵容官宣",
+        "rank": 5,
+        "heat_value": 645258,
+        "tag": "",
+        "category": "剧集",
+        "product_name": "嫁金钗阵容官宣主题商品",
+        "market_category": "文创产品",
+        "target_audience": "18-35岁年轻人群",
+        "description": "基于热搜话题'嫁金钗阵容官宣'的创意产品",
+        "manufacturing_details": "小批量生产，待进一步分析",
+        "score_breakdown": {
+          "development_potential": 20,
+          "interest_level": 10,
+          "life_utility": 10,
+          "production_ease": 10
+        },
+        "total_score": 50,
+        "score_justification": "⚠️ AI分析失败，使用默认评分",
+        "research_summary": {
+          "social_media": "⚠️ 搜索结果受限",
+          "news_background": "⚠️ 搜索结果受限",
+          "user_insights": "⚠️ 搜索结果受限",
+          "market_potential": "基于通用市场分析"
+        },
+        "tier_name": "其他",
+        "tier_badge": "📋 其他",
+        "tier_class": "other"
+      },
+      {
+        "keyword": "今年最烂大街的穿搭",
+        "rank": 6,
+        "heat_value": 484162,
+        "tag": "新",
+        "category": "",
+        "product_name": "今年最烂大街的穿搭主题商品",
+        "market_category": "文创产品",
+        "target_audience": "18-35岁年轻人群",
+        "description": "基于热搜话题'今年最烂大街的穿搭'的创意产品",
+        "manufacturing_details": "小批量生产，待进一步分析",
+        "score_breakdown": {
+          "development_potential": 20,
+          "interest_level": 10,
+          "life_utility": 10,
+          "production_ease": 10
+        },
+        "total_score": 50,
+        "score_justification": "⚠️ AI分析失败，使用默认评分",
+        "research_summary": {
+          "social_media": "⚠️ 搜索结果受限",
+          "news_background": "⚠️ 搜索结果受限",
+          "user_insights": "⚠️ 搜索结果受限",
+          "market_potential": "基于通用市场分析"
+        },
+        "tier_name": "其他",
+        "tier_badge": "📋 其他",
+        "tier_class": "other"
+      },
+      {
+        "keyword": "邓为SABON亚太区品牌代言人",
+        "rank": 7,
+        "heat_value": 0,
+        "tag": "",
+        "category": "",
+        "product_name": "邓为SABON亚太区品牌代言人主题商品",
+        "market_category": "文创产品",
+        "target_audience": "18-35岁年轻人群",
+        "description": "基于热搜话题'邓为SABON亚太区品牌代言人'的创意产品",
+        "manufacturing_details": "小批量生产，待进一步分析",
+        "score_breakdown": {
+          "development_potential": 20,
+          "interest_level": 10,
+          "life_utility": 10,
+          "production_ease": 10
+        },
+        "total_score": 50,
+        "score_justification": "⚠️ AI分析失败，使用默认评分",
+        "research_summary": {
+          "social_media": "⚠️ 搜索结果受限",
+          "news_background": "⚠️ 搜索结果受限",
+          "user_insights": "⚠️ 搜索结果受限",
+          "market_potential": "基于通用市场分析"
+        },
+        "tier_name": "其他",
+        "tier_badge": "📋 其他",
+        "tier_class": "other"
+      },
+      {
+        "keyword": "张艺谋拍的杨幂刘诗诗",
+        "rank": 8,
+        "heat_value": 428245,
+        "tag": "新",
+        "category": "电影",
+        "product_name": "张艺谋拍的杨幂刘诗诗主题商品",
+        "market_category": "文创产品",
+        "target_audience": "18-35岁年轻人群",
+        "description": "基于热搜话题'张艺谋拍的杨幂刘诗诗'的创意产品",
+        "manufacturing_details": "小批量生产，待进一步分析",
+        "score_breakdown": {
+          "development_potential": 20,
+          "interest_level": 10,
+          "life_utility": 10,
+          "production_ease": 10
+        },
+        "total_score": 50,
+        "score_justification": "⚠️ AI分析失败，使用默认评分",
+        "research_summary": {
+          "social_media": "⚠️ 搜索结果受限",
+          "news_background": "⚠️ 搜索结果受限",
+          "user_insights": "⚠️ 搜索结果受限",
+          "market_potential": "基于通用市场分析"
+        },
+        "tier_name": "其他",
+        "tier_badge": "📋 其他",
+        "tier_class": "other"
+      },
+      {
+        "keyword": "永辉超市胖改第二年预亏21亿",
+        "rank": 9,
+        "heat_value": 349532,
+        "tag": "",
+        "category": "",
+        "product_name": "永辉超市胖改第二年预亏21亿主题商品",
+        "market_category": "文创产品",
+        "target_audience": "18-35岁年轻人群",
+        "description": "基于热搜话题'永辉超市胖改第二年预亏21亿'的创意产品",
+        "manufacturing_details": "小批量生产，待进一步分析",
+        "score_breakdown": {
+          "development_potential": 20,
+          "interest_level": 10,
+          "life_utility": 10,
+          "production_ease": 10
+        },
+        "total_score": 50,
+        "score_justification": "⚠️ AI分析失败，使用默认评分",
+        "research_summary": {
+          "social_media": "⚠️ 搜索结果受限",
+          "news_background": "⚠️ 搜索结果受限",
+          "user_insights": "⚠️ 搜索结果受限",
+          "market_potential": "基于通用市场分析"
+        },
+        "tier_name": "其他",
+        "tier_badge": "📋 其他",
+        "tier_class": "other"
+      },
+      {
+        "keyword": "程序员猝死后8小时仍有工作消息",
+        "rank": 10,
+        "heat_value": 343902,
+        "tag": "热",
+        "category": "",
+        "product_name": "程序员猝死后8小时仍有工作消息主题商品",
+        "market_category": "文创产品",
+        "target_audience": "18-35岁年轻人群",
+        "description": "基于热搜话题'程序员猝死后8小时仍有工作消息'的创意产品",
+        "manufacturing_details": "小批量生产，待进一步分析",
+        "score_breakdown": {
+          "development_potential": 20,
+          "interest_level": 10,
+          "life_utility": 10,
+          "production_ease": 10
+        },
+        "total_score": 50,
+        "score_justification": "⚠️ AI分析失败，使用默认评分",
+        "research_summary": {
+          "social_media": "⚠️ 搜索结果受限",
+          "news_background": "⚠️ 搜索结果受限",
+          "user_insights": "⚠️ 搜索结果受限",
+          "market_potential": "基于通用市场分析"
+        },
+        "tier_name": "其他",
+        "tier_badge": "📋 其他",
+        "tier_class": "other"
+      }
+    ]
+  },
+  "all_products": [
+    {
+      "keyword": "惊蛰无声定档",
+      "rank": 1,
+      "heat_value": 1262284,
+      "tag": "",
+      "category": "电影",
+      "product_name": "惊蛰无声定档主题商品",
+      "market_category": "文创产品",
+      "target_audience": "18-35岁年轻人群",
+      "description": "基于热搜话题'惊蛰无声定档'的创意产品",
+      "manufacturing_details": "小批量生产，待进一步分析",
+      "score_breakdown": {
+        "development_potential": 20,
+        "interest_level": 10,
+        "life_utility": 10,
+        "production_ease": 10
+      },
+      "total_score": 50,
+      "score_justification": "⚠️ AI分析失败，使用默认评分",
+      "research_summary": {
+        "social_media": "⚠️ 搜索结果受限",
+        "news_background": "⚠️ 搜索结果受限",
+        "user_insights": "⚠️ 搜索结果受限",
+        "market_potential": "基于通用市场分析"
+      },
+      "tier_name": "其他",
+      "tier_badge": "📋 其他",
+      "tier_class": "other"
+    },
+    {
+      "keyword": "考研失败情侣辞职回村7年后翻盘",
+      "rank": 2,
+      "heat_value": 887333,
+      "tag": "新",
+      "category": "",
+      "product_name": "考研失败情侣辞职回村7年后翻盘主题商品",
+      "market_category": "文创产品",
+      "target_audience": "18-35岁年轻人群",
+      "description": "基于热搜话题'考研失败情侣辞职回村7年后翻盘'的创意产品",
+      "manufacturing_details": "小批量生产，待进一步分析",
+      "score_breakdown": {
+        "development_potential": 20,
+        "interest_level": 10,
+        "life_utility": 10,
+        "production_ease": 10
+      },
+      "total_score": 50,
+      "score_justification": "⚠️ AI分析失败，使用默认评分",
+      "research_summary": {
+        "social_media": "⚠️ 搜索结果受限",
+        "news_background": "⚠️ 搜索结果受限",
+        "user_insights": "⚠️ 搜索结果受限",
+        "market_potential": "基于通用市场分析"
+      },
+      "tier_name": "其他",
+      "tier_badge": "📋 其他",
+      "tier_class": "other"
+    },
+    {
+      "keyword": "数读工业和信息化发展新成效",
+      "rank": 3,
+      "heat_value": 717019,
+      "tag": "",
+      "category": "",
+      "product_name": "数读工业和信息化发展新成效主题商品",
+      "market_category": "文创产品",
+      "target_audience": "18-35岁年轻人群",
+      "description": "基于热搜话题'数读工业和信息化发展新成效'的创意产品",
+      "manufacturing_details": "小批量生产，待进一步分析",
+      "score_breakdown": {
+        "development_potential": 20,
+        "interest_level": 10,
+        "life_utility": 10,
+        "production_ease": 10
+      },
+      "total_score": 50,
+      "score_justification": "⚠️ AI分析失败，使用默认评分",
+      "research_summary": {
+        "social_media": "⚠️ 搜索结果受限",
+        "news_background": "⚠️ 搜索结果受限",
+        "user_insights": "⚠️ 搜索结果受限",
+        "market_potential": "基于通用市场分析"
+      },
+      "tier_name": "其他",
+      "tier_badge": "📋 其他",
+      "tier_class": "other"
+    },
+    {
+      "keyword": "程序员猝死当天5次访问公司OA系统",
+      "rank": 4,
+      "heat_value": 681816,
+      "tag": "",
+      "category": "",
+      "product_name": "程序员猝死当天5次访问公司OA系统主题商品",
+      "market_category": "文创产品",
+      "target_audience": "18-35岁年轻人群",
+      "description": "基于热搜话题'程序员猝死当天5次访问公司OA系统'的创意产品",
+      "manufacturing_details": "小批量生产，待进一步分析",
+      "score_breakdown": {
+        "development_potential": 20,
+        "interest_level": 10,
+        "life_utility": 10,
+        "production_ease": 10
+      },
+      "total_score": 50,
+      "score_justification": "⚠️ AI分析失败，使用默认评分",
+      "research_summary": {
+        "social_media": "⚠️ 搜索结果受限",
+        "news_background": "⚠️ 搜索结果受限",
+        "user_insights": "⚠️ 搜索结果受限",
+        "market_potential": "基于通用市场分析"
+      },
+      "tier_name": "其他",
+      "tier_badge": "📋 其他",
+      "tier_class": "other"
+    },
+    {
+      "keyword": "嫁金钗阵容官宣",
+      "rank": 5,
+      "heat_value": 645258,
+      "tag": "",
+      "category": "剧集",
+      "product_name": "嫁金钗阵容官宣主题商品",
+      "market_category": "文创产品",
+      "target_audience": "18-35岁年轻人群",
+      "description": "基于热搜话题'嫁金钗阵容官宣'的创意产品",
+      "manufacturing_details": "小批量生产，待进一步分析",
+      "score_breakdown": {
+        "development_potential": 20,
+        "interest_level": 10,
+        "life_utility": 10,
+        "production_ease": 10
+      },
+      "total_score": 50,
+      "score_justification": "⚠️ AI分析失败，使用默认评分",
+      "research_summary": {
+        "social_media": "⚠️ 搜索结果受限",
+        "news_background": "⚠️ 搜索结果受限",
+        "user_insights": "⚠️ 搜索结果受限",
+        "market_potential": "基于通用市场分析"
+      },
+      "tier_name": "其他",
+      "tier_badge": "📋 其他",
+      "tier_class": "other"
+    },
+    {
+      "keyword": "今年最烂大街的穿搭",
+      "rank": 6,
+      "heat_value": 484162,
+      "tag": "新",
+      "category": "",
+      "product_name": "今年最烂大街的穿搭主题商品",
+      "market_category": "文创产品",
+      "target_audience": "18-35岁年轻人群",
+      "description": "基于热搜话题'今年最烂大街的穿搭'的创意产品",
+      "manufacturing_details": "小批量生产，待进一步分析",
+      "score_breakdown": {
+        "development_potential": 20,
+        "interest_level": 10,
+        "life_utility": 10,
+        "production_ease": 10
+      },
+      "total_score": 50,
+      "score_justification": "⚠️ AI分析失败，使用默认评分",
+      "research_summary": {
+        "social_media": "⚠️ 搜索结果受限",
+        "news_background": "⚠️ 搜索结果受限",
+        "user_insights": "⚠️ 搜索结果受限",
+        "market_potential": "基于通用市场分析"
+      },
+      "tier_name": "其他",
+      "tier_badge": "📋 其他",
+      "tier_class": "other"
+    },
+    {
+      "keyword": "邓为SABON亚太区品牌代言人",
+      "rank": 7,
+      "heat_value": 0,
+      "tag": "",
+      "category": "",
+      "product_name": "邓为SABON亚太区品牌代言人主题商品",
+      "market_category": "文创产品",
+      "target_audience": "18-35岁年轻人群",
+      "description": "基于热搜话题'邓为SABON亚太区品牌代言人'的创意产品",
+      "manufacturing_details": "小批量生产，待进一步分析",
+      "score_breakdown": {
+        "development_potential": 20,
+        "interest_level": 10,
+        "life_utility": 10,
+        "production_ease": 10
+      },
+      "total_score": 50,
+      "score_justification": "⚠️ AI分析失败，使用默认评分",
+      "research_summary": {
+        "social_media": "⚠️ 搜索结果受限",
+        "news_background": "⚠️ 搜索结果受限",
+        "user_insights": "⚠️ 搜索结果受限",
+        "market_potential": "基于通用市场分析"
+      },
+      "tier_name": "其他",
+      "tier_badge": "📋 其他",
+      "tier_class": "other"
+    },
+    {
+      "keyword": "张艺谋拍的杨幂刘诗诗",
+      "rank": 8,
+      "heat_value": 428245,
+      "tag": "新",
+      "category": "电影",
+      "product_name": "张艺谋拍的杨幂刘诗诗主题商品",
+      "market_category": "文创产品",
+      "target_audience": "18-35岁年轻人群",
+      "description": "基于热搜话题'张艺谋拍的杨幂刘诗诗'的创意产品",
+      "manufacturing_details": "小批量生产，待进一步分析",
+      "score_breakdown": {
+        "development_potential": 20,
+        "interest_level": 10,
+        "life_utility": 10,
+        "production_ease": 10
+      },
+      "total_score": 50,
+      "score_justification": "⚠️ AI分析失败，使用默认评分",
+      "research_summary": {
+        "social_media": "⚠️ 搜索结果受限",
+        "news_background": "⚠️ 搜索结果受限",
+        "user_insights": "⚠️ 搜索结果受限",
+        "market_potential": "基于通用市场分析"
+      },
+      "tier_name": "其他",
+      "tier_badge": "📋 其他",
+      "tier_class": "other"
+    },
+    {
+      "keyword": "永辉超市胖改第二年预亏21亿",
+      "rank": 9,
+      "heat_value": 349532,
+      "tag": "",
+      "category": "",
+      "product_name": "永辉超市胖改第二年预亏21亿主题商品",
+      "market_category": "文创产品",
+      "target_audience": "18-35岁年轻人群",
+      "description": "基于热搜话题'永辉超市胖改第二年预亏21亿'的创意产品",
+      "manufacturing_details": "小批量生产，待进一步分析",
+      "score_breakdown": {
+        "development_potential": 20,
+        "interest_level": 10,
+        "life_utility": 10,
+        "production_ease": 10
+      },
+      "total_score": 50,
+      "score_justification": "⚠️ AI分析失败，使用默认评分",
+      "research_summary": {
+        "social_media": "⚠️ 搜索结果受限",
+        "news_background": "⚠️ 搜索结果受限",
+        "user_insights": "⚠️ 搜索结果受限",
+        "market_potential": "基于通用市场分析"
+      },
+      "tier_name": "其他",
+      "tier_badge": "📋 其他",
+      "tier_class": "other"
+    },
+    {
+      "keyword": "程序员猝死后8小时仍有工作消息",
+      "rank": 10,
+      "heat_value": 343902,
+      "tag": "热",
+      "category": "",
+      "product_name": "程序员猝死后8小时仍有工作消息主题商品",
+      "market_category": "文创产品",
+      "target_audience": "18-35岁年轻人群",
+      "description": "基于热搜话题'程序员猝死后8小时仍有工作消息'的创意产品",
+      "manufacturing_details": "小批量生产，待进一步分析",
+      "score_breakdown": {
+        "development_potential": 20,
+        "interest_level": 10,
+        "life_utility": 10,
+        "production_ease": 10
+      },
+      "total_score": 50,
+      "score_justification": "⚠️ AI分析失败，使用默认评分",
+      "research_summary": {
+        "social_media": "⚠️ 搜索结果受限",
+        "news_background": "⚠️ 搜索结果受限",
+        "user_insights": "⚠️ 搜索结果受限",
+        "market_potential": "基于通用市场分析"
+      },
+      "tier_name": "其他",
+      "tier_badge": "📋 其他",
+      "tier_class": "other"
+    }
+  ]
+}
