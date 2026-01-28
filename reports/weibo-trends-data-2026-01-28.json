@@ -1,0 +1,598 @@
+{
+  "metadata": {
+    "generated_at": "2026年01月28日 03:01:04",
+    "total_analyzed": 10,
+    "average_score": 50.0,
+    "excellent_count": 0,
+    "good_count": 0,
+    "other_count": 10
+  },
+  "products": {
+    "excellent": [],
+    "good": [],
+    "other": [
+      {
+        "keyword": "团播不得浓妆艳抹过度磨皮美颜",
+        "rank": 1,
+        "heat_value": 1043580,
+        "tag": "",
+        "category": "",
+        "product_name": "团播不得浓妆艳抹过度磨皮美颜主题商品",
+        "market_category": "文创产品",
+        "target_audience": "18-35岁年轻人群",
+        "description": "基于热搜话题'团播不得浓妆艳抹过度磨皮美颜'的创意产品",
+        "manufacturing_details": "小批量生产，待进一步分析",
+        "score_breakdown": {
+          "development_potential": 20,
+          "interest_level": 10,
+          "life_utility": 10,
+          "production_ease": 10
+        },
+        "total_score": 50,
+        "score_justification": "⚠️ AI分析失败，使用默认评分",
+        "research_summary": {
+          "social_media": "⚠️ 搜索结果受限",
+          "news_background": "⚠️ 搜索结果受限",
+          "user_insights": "⚠️ 搜索结果受限",
+          "market_potential": "基于通用市场分析"
+        },
+        "tier_name": "其他",
+        "tier_badge": "📋 其他",
+        "tier_class": "other"
+      },
+      {
+        "keyword": "1克黄金竟能打造一张完整黄金婚书",
+        "rank": 2,
+        "heat_value": 731650,
+        "tag": "",
+        "category": "",
+        "product_name": "1克黄金竟能打造一张完整黄金婚书主题商品",
+        "market_category": "文创产品",
+        "target_audience": "18-35岁年轻人群",
+        "description": "基于热搜话题'1克黄金竟能打造一张完整黄金婚书'的创意产品",
+        "manufacturing_details": "小批量生产，待进一步分析",
+        "score_breakdown": {
+          "development_potential": 20,
+          "interest_level": 10,
+          "life_utility": 10,
+          "production_ease": 10
+        },
+        "total_score": 50,
+        "score_justification": "⚠️ AI分析失败，使用默认评分",
+        "research_summary": {
+          "social_media": "⚠️ 搜索结果受限",
+          "news_background": "⚠️ 搜索结果受限",
+          "user_insights": "⚠️ 搜索结果受限",
+          "market_potential": "基于通用市场分析"
+        },
+        "tier_name": "其他",
+        "tier_badge": "📋 其他",
+        "tier_class": "other"
+      },
+      {
+        "keyword": "2026逐梦中国",
+        "rank": 3,
+        "heat_value": 594588,
+        "tag": "",
+        "category": "",
+        "product_name": "2026逐梦中国主题商品",
+        "market_category": "文创产品",
+        "target_audience": "18-35岁年轻人群",
+        "description": "基于热搜话题'2026逐梦中国'的创意产品",
+        "manufacturing_details": "小批量生产，待进一步分析",
+        "score_breakdown": {
+          "development_potential": 20,
+          "interest_level": 10,
+          "life_utility": 10,
+          "production_ease": 10
+        },
+        "total_score": 50,
+        "score_justification": "⚠️ AI分析失败，使用默认评分",
+        "research_summary": {
+          "social_media": "⚠️ 搜索结果受限",
+          "news_background": "⚠️ 搜索结果受限",
+          "user_insights": "⚠️ 搜索结果受限",
+          "market_potential": "基于通用市场分析"
+        },
+        "tier_name": "其他",
+        "tier_badge": "📋 其他",
+        "tier_class": "other"
+      },
+      {
+        "keyword": "科比大女儿发文缅怀",
+        "rank": 4,
+        "heat_value": 240265,
+        "tag": "",
+        "category": "",
+        "product_name": "科比大女儿发文缅怀主题商品",
+        "market_category": "文创产品",
+        "target_audience": "18-35岁年轻人群",
+        "description": "基于热搜话题'科比大女儿发文缅怀'的创意产品",
+        "manufacturing_details": "小批量生产，待进一步分析",
+        "score_breakdown": {
+          "development_potential": 20,
+          "interest_level": 10,
+          "life_utility": 10,
+          "production_ease": 10
+        },
+        "total_score": 50,
+        "score_justification": "⚠️ AI分析失败，使用默认评分",
+        "research_summary": {
+          "social_media": "⚠️ 搜索结果受限",
+          "news_background": "⚠️ 搜索结果受限",
+          "user_insights": "⚠️ 搜索结果受限",
+          "market_potential": "基于通用市场分析"
+        },
+        "tier_name": "其他",
+        "tier_badge": "📋 其他",
+        "tier_class": "other"
+      },
+      {
+        "keyword": "旅日大熊猫回国走出快乐步伐",
+        "rank": 5,
+        "heat_value": 183166,
+        "tag": "",
+        "category": "",
+        "product_name": "旅日大熊猫回国走出快乐步伐主题商品",
+        "market_category": "文创产品",
+        "target_audience": "18-35岁年轻人群",
+        "description": "基于热搜话题'旅日大熊猫回国走出快乐步伐'的创意产品",
+        "manufacturing_details": "小批量生产，待进一步分析",
+        "score_breakdown": {
+          "development_potential": 20,
+          "interest_level": 10,
+          "life_utility": 10,
+          "production_ease": 10
+        },
+        "total_score": 50,
+        "score_justification": "⚠️ AI分析失败，使用默认评分",
+        "research_summary": {
+          "social_media": "⚠️ 搜索结果受限",
+          "news_background": "⚠️ 搜索结果受限",
+          "user_insights": "⚠️ 搜索结果受限",
+          "market_potential": "基于通用市场分析"
+        },
+        "tier_name": "其他",
+        "tier_badge": "📋 其他",
+        "tier_class": "other"
+      },
+      {
+        "keyword": "拒绝暗示性求助",
+        "rank": 6,
+        "heat_value": 179974,
+        "tag": "新",
+        "category": "",
+        "product_name": "拒绝暗示性求助主题商品",
+        "market_category": "文创产品",
+        "target_audience": "18-35岁年轻人群",
+        "description": "基于热搜话题'拒绝暗示性求助'的创意产品",
+        "manufacturing_details": "小批量生产，待进一步分析",
+        "score_breakdown": {
+          "development_potential": 20,
+          "interest_level": 10,
+          "life_utility": 10,
+          "production_ease": 10
+        },
+        "total_score": 50,
+        "score_justification": "⚠️ AI分析失败，使用默认评分",
+        "research_summary": {
+          "social_media": "⚠️ 搜索结果受限",
+          "news_background": "⚠️ 搜索结果受限",
+          "user_insights": "⚠️ 搜索结果受限",
+          "market_potential": "基于通用市场分析"
+        },
+        "tier_name": "其他",
+        "tier_badge": "📋 其他",
+        "tier_class": "other"
+      },
+      {
+        "keyword": "金饰克价突破1620元",
+        "rank": 7,
+        "heat_value": 178362,
+        "tag": "",
+        "category": "",
+        "product_name": "金饰克价突破1620元主题商品",
+        "market_category": "文创产品",
+        "target_audience": "18-35岁年轻人群",
+        "description": "基于热搜话题'金饰克价突破1620元'的创意产品",
+        "manufacturing_details": "小批量生产，待进一步分析",
+        "score_breakdown": {
+          "development_potential": 20,
+          "interest_level": 10,
+          "life_utility": 10,
+          "production_ease": 10
+        },
+        "total_score": 50,
+        "score_justification": "⚠️ AI分析失败，使用默认评分",
+        "research_summary": {
+          "social_media": "⚠️ 搜索结果受限",
+          "news_background": "⚠️ 搜索结果受限",
+          "user_insights": "⚠️ 搜索结果受限",
+          "market_potential": "基于通用市场分析"
+        },
+        "tier_name": "其他",
+        "tier_badge": "📋 其他",
+        "tier_class": "other"
+      },
+      {
+        "keyword": "美向以色列通报对伊朗军事行动准备",
+        "rank": 8,
+        "heat_value": 174694,
+        "tag": "新",
+        "category": "",
+        "product_name": "美向以色列通报对伊朗军事行动准备主题商品",
+        "market_category": "文创产品",
+        "target_audience": "18-35岁年轻人群",
+        "description": "基于热搜话题'美向以色列通报对伊朗军事行动准备'的创意产品",
+        "manufacturing_details": "小批量生产，待进一步分析",
+        "score_breakdown": {
+          "development_potential": 20,
+          "interest_level": 10,
+          "life_utility": 10,
+          "production_ease": 10
+        },
+        "total_score": 50,
+        "score_justification": "⚠️ AI分析失败，使用默认评分",
+        "research_summary": {
+          "social_media": "⚠️ 搜索结果受限",
+          "news_background": "⚠️ 搜索结果受限",
+          "user_insights": "⚠️ 搜索结果受限",
+          "market_potential": "基于通用市场分析"
+        },
+        "tier_name": "其他",
+        "tier_badge": "📋 其他",
+        "tier_class": "other"
+      },
+      {
+        "keyword": "杨瀚森勾手",
+        "rank": 9,
+        "heat_value": 160784,
+        "tag": "",
+        "category": "",
+        "product_name": "杨瀚森勾手主题商品",
+        "market_category": "文创产品",
+        "target_audience": "18-35岁年轻人群",
+        "description": "基于热搜话题'杨瀚森勾手'的创意产品",
+        "manufacturing_details": "小批量生产，待进一步分析",
+        "score_breakdown": {
+          "development_potential": 20,
+          "interest_level": 10,
+          "life_utility": 10,
+          "production_ease": 10
+        },
+        "total_score": 50,
+        "score_justification": "⚠️ AI分析失败，使用默认评分",
+        "research_summary": {
+          "social_media": "⚠️ 搜索结果受限",
+          "news_background": "⚠️ 搜索结果受限",
+          "user_insights": "⚠️ 搜索结果受限",
+          "market_potential": "基于通用市场分析"
+        },
+        "tier_name": "其他",
+        "tier_badge": "📋 其他",
+        "tier_class": "other"
+      },
+      {
+        "keyword": "人民日报评幽灵外卖无良作坊",
+        "rank": 10,
+        "heat_value": 156368,
+        "tag": "新",
+        "category": "",
+        "product_name": "人民日报评幽灵外卖无良作坊主题商品",
+        "market_category": "文创产品",
+        "target_audience": "18-35岁年轻人群",
+        "description": "基于热搜话题'人民日报评幽灵外卖无良作坊'的创意产品",
+        "manufacturing_details": "小批量生产，待进一步分析",
+        "score_breakdown": {
+          "development_potential": 20,
+          "interest_level": 10,
+          "life_utility": 10,
+          "production_ease": 10
+        },
+        "total_score": 50,
+        "score_justification": "⚠️ AI分析失败，使用默认评分",
+        "research_summary": {
+          "social_media": "⚠️ 搜索结果受限",
+          "news_background": "⚠️ 搜索结果受限",
+          "user_insights": "⚠️ 搜索结果受限",
+          "market_potential": "基于通用市场分析"
+        },
+        "tier_name": "其他",
+        "tier_badge": "📋 其他",
+        "tier_class": "other"
+      }
+    ]
+  },
+  "all_products": [
+    {
+      "keyword": "团播不得浓妆艳抹过度磨皮美颜",
+      "rank": 1,
+      "heat_value": 1043580,
+      "tag": "",
+      "category": "",
+      "product_name": "团播不得浓妆艳抹过度磨皮美颜主题商品",
+      "market_category": "文创产品",
+      "target_audience": "18-35岁年轻人群",
+      "description": "基于热搜话题'团播不得浓妆艳抹过度磨皮美颜'的创意产品",
+      "manufacturing_details": "小批量生产，待进一步分析",
+      "score_breakdown": {
+        "development_potential": 20,
+        "interest_level": 10,
+        "life_utility": 10,
+        "production_ease": 10
+      },
+      "total_score": 50,
+      "score_justification": "⚠️ AI分析失败，使用默认评分",
+      "research_summary": {
+        "social_media": "⚠️ 搜索结果受限",
+        "news_background": "⚠️ 搜索结果受限",
+        "user_insights": "⚠️ 搜索结果受限",
+        "market_potential": "基于通用市场分析"
+      },
+      "tier_name": "其他",
+      "tier_badge": "📋 其他",
+      "tier_class": "other"
+    },
+    {
+      "keyword": "1克黄金竟能打造一张完整黄金婚书",
+      "rank": 2,
+      "heat_value": 731650,
+      "tag": "",
+      "category": "",
+      "product_name": "1克黄金竟能打造一张完整黄金婚书主题商品",
+      "market_category": "文创产品",
+      "target_audience": "18-35岁年轻人群",
+      "description": "基于热搜话题'1克黄金竟能打造一张完整黄金婚书'的创意产品",
+      "manufacturing_details": "小批量生产，待进一步分析",
+      "score_breakdown": {
+        "development_potential": 20,
+        "interest_level": 10,
+        "life_utility": 10,
+        "production_ease": 10
+      },
+      "total_score": 50,
+      "score_justification": "⚠️ AI分析失败，使用默认评分",
+      "research_summary": {
+        "social_media": "⚠️ 搜索结果受限",
+        "news_background": "⚠️ 搜索结果受限",
+        "user_insights": "⚠️ 搜索结果受限",
+        "market_potential": "基于通用市场分析"
+      },
+      "tier_name": "其他",
+      "tier_badge": "📋 其他",
+      "tier_class": "other"
+    },
+    {
+      "keyword": "2026逐梦中国",
+      "rank": 3,
+      "heat_value": 594588,
+      "tag": "",
+      "category": "",
+      "product_name": "2026逐梦中国主题商品",
+      "market_category": "文创产品",
+      "target_audience": "18-35岁年轻人群",
+      "description": "基于热搜话题'2026逐梦中国'的创意产品",
+      "manufacturing_details": "小批量生产，待进一步分析",
+      "score_breakdown": {
+        "development_potential": 20,
+        "interest_level": 10,
+        "life_utility": 10,
+        "production_ease": 10
+      },
+      "total_score": 50,
+      "score_justification": "⚠️ AI分析失败，使用默认评分",
+      "research_summary": {
+        "social_media": "⚠️ 搜索结果受限",
+        "news_background": "⚠️ 搜索结果受限",
+        "user_insights": "⚠️ 搜索结果受限",
+        "market_potential": "基于通用市场分析"
+      },
+      "tier_name": "其他",
+      "tier_badge": "📋 其他",
+      "tier_class": "other"
+    },
+    {
+      "keyword": "科比大女儿发文缅怀",
+      "rank": 4,
+      "heat_value": 240265,
+      "tag": "",
+      "category": "",
+      "product_name": "科比大女儿发文缅怀主题商品",
+      "market_category": "文创产品",
+      "target_audience": "18-35岁年轻人群",
+      "description": "基于热搜话题'科比大女儿发文缅怀'的创意产品",
+      "manufacturing_details": "小批量生产，待进一步分析",
+      "score_breakdown": {
+        "development_potential": 20,
+        "interest_level": 10,
+        "life_utility": 10,
+        "production_ease": 10
+      },
+      "total_score": 50,
+      "score_justification": "⚠️ AI分析失败，使用默认评分",
+      "research_summary": {
+        "social_media": "⚠️ 搜索结果受限",
+        "news_background": "⚠️ 搜索结果受限",
+        "user_insights": "⚠️ 搜索结果受限",
+        "market_potential": "基于通用市场分析"
+      },
+      "tier_name": "其他",
+      "tier_badge": "📋 其他",
+      "tier_class": "other"
+    },
+    {
+      "keyword": "旅日大熊猫回国走出快乐步伐",
+      "rank": 5,
+      "heat_value": 183166,
+      "tag": "",
+      "category": "",
+      "product_name": "旅日大熊猫回国走出快乐步伐主题商品",
+      "market_category": "文创产品",
+      "target_audience": "18-35岁年轻人群",
+      "description": "基于热搜话题'旅日大熊猫回国走出快乐步伐'的创意产品",
+      "manufacturing_details": "小批量生产，待进一步分析",
+      "score_breakdown": {
+        "development_potential": 20,
+        "interest_level": 10,
+        "life_utility": 10,
+        "production_ease": 10
+      },
+      "total_score": 50,
+      "score_justification": "⚠️ AI分析失败，使用默认评分",
+      "research_summary": {
+        "social_media": "⚠️ 搜索结果受限",
+        "news_background": "⚠️ 搜索结果受限",
+        "user_insights": "⚠️ 搜索结果受限",
+        "market_potential": "基于通用市场分析"
+      },
+      "tier_name": "其他",
+      "tier_badge": "📋 其他",
+      "tier_class": "other"
+    },
+    {
+      "keyword": "拒绝暗示性求助",
+      "rank": 6,
+      "heat_value": 179974,
+      "tag": "新",
+      "category": "",
+      "product_name": "拒绝暗示性求助主题商品",
+      "market_category": "文创产品",
+      "target_audience": "18-35岁年轻人群",
+      "description": "基于热搜话题'拒绝暗示性求助'的创意产品",
+      "manufacturing_details": "小批量生产，待进一步分析",
+      "score_breakdown": {
+        "development_potential": 20,
+        "interest_level": 10,
+        "life_utility": 10,
+        "production_ease": 10
+      },
+      "total_score": 50,
+      "score_justification": "⚠️ AI分析失败，使用默认评分",
+      "research_summary": {
+        "social_media": "⚠️ 搜索结果受限",
+        "news_background": "⚠️ 搜索结果受限",
+        "user_insights": "⚠️ 搜索结果受限",
+        "market_potential": "基于通用市场分析"
+      },
+      "tier_name": "其他",
+      "tier_badge": "📋 其他",
+      "tier_class": "other"
+    },
+    {
+      "keyword": "金饰克价突破1620元",
+      "rank": 7,
+      "heat_value": 178362,
+      "tag": "",
+      "category": "",
+      "product_name": "金饰克价突破1620元主题商品",
+      "market_category": "文创产品",
+      "target_audience": "18-35岁年轻人群",
+      "description": "基于热搜话题'金饰克价突破1620元'的创意产品",
+      "manufacturing_details": "小批量生产，待进一步分析",
+      "score_breakdown": {
+        "development_potential": 20,
+        "interest_level": 10,
+        "life_utility": 10,
+        "production_ease": 10
+      },
+      "total_score": 50,
+      "score_justification": "⚠️ AI分析失败，使用默认评分",
+      "research_summary": {
+        "social_media": "⚠️ 搜索结果受限",
+        "news_background": "⚠️ 搜索结果受限",
+        "user_insights": "⚠️ 搜索结果受限",
+        "market_potential": "基于通用市场分析"
+      },
+      "tier_name": "其他",
+      "tier_badge": "📋 其他",
+      "tier_class": "other"
+    },
+    {
+      "keyword": "美向以色列通报对伊朗军事行动准备",
+      "rank": 8,
+      "heat_value": 174694,
+      "tag": "新",
+      "category": "",
+      "product_name": "美向以色列通报对伊朗军事行动准备主题商品",
+      "market_category": "文创产品",
+      "target_audience": "18-35岁年轻人群",
+      "description": "基于热搜话题'美向以色列通报对伊朗军事行动准备'的创意产品",
+      "manufacturing_details": "小批量生产，待进一步分析",
+      "score_breakdown": {
+        "development_potential": 20,
+        "interest_level": 10,
+        "life_utility": 10,
+        "production_ease": 10
+      },
+      "total_score": 50,
+      "score_justification": "⚠️ AI分析失败，使用默认评分",
+      "research_summary": {
+        "social_media": "⚠️ 搜索结果受限",
+        "news_background": "⚠️ 搜索结果受限",
+        "user_insights": "⚠️ 搜索结果受限",
+        "market_potential": "基于通用市场分析"
+      },
+      "tier_name": "其他",
+      "tier_badge": "📋 其他",
+      "tier_class": "other"
+    },
+    {
+      "keyword": "杨瀚森勾手",
+      "rank": 9,
+      "heat_value": 160784,
+      "tag": "",
+      "category": "",
+      "product_name": "杨瀚森勾手主题商品",
+      "market_category": "文创产品",
+      "target_audience": "18-35岁年轻人群",
+      "description": "基于热搜话题'杨瀚森勾手'的创意产品",
+      "manufacturing_details": "小批量生产，待进一步分析",
+      "score_breakdown": {
+        "development_potential": 20,
+        "interest_level": 10,
+        "life_utility": 10,
+        "production_ease": 10
+      },
+      "total_score": 50,
+      "score_justification": "⚠️ AI分析失败，使用默认评分",
+      "research_summary": {
+        "social_media": "⚠️ 搜索结果受限",
+        "news_background": "⚠️ 搜索结果受限",
+        "user_insights": "⚠️ 搜索结果受限",
+        "market_potential": "基于通用市场分析"
+      },
+      "tier_name": "其他",
+      "tier_badge": "📋 其他",
+      "tier_class": "other"
+    },
+    {
+      "keyword": "人民日报评幽灵外卖无良作坊",
+      "rank": 10,
+      "heat_value": 156368,
+      "tag": "新",
+      "category": "",
+      "product_name": "人民日报评幽灵外卖无良作坊主题商品",
+      "market_category": "文创产品",
+      "target_audience": "18-35岁年轻人群",
+      "description": "基于热搜话题'人民日报评幽灵外卖无良作坊'的创意产品",
+      "manufacturing_details": "小批量生产，待进一步分析",
+      "score_breakdown": {
+        "development_potential": 20,
+        "interest_level": 10,
+        "life_utility": 10,
+        "production_ease": 10
+      },
+      "total_score": 50,
+      "score_justification": "⚠️ AI分析失败，使用默认评分",
+      "research_summary": {
+        "social_media": "⚠️ 搜索结果受限",
+        "news_background": "⚠️ 搜索结果受限",
+        "user_insights": "⚠️ 搜索结果受限",
+        "market_potential": "基于通用市场分析"
+      },
+      "tier_name": "其他",
+      "tier_badge": "📋 其他",
+      "tier_class": "other"
+    }
+  ]
+}
