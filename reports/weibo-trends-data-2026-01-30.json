@@ -1,0 +1,598 @@
+{
+  "metadata": {
+    "generated_at": "2026年01月30日 03:25:26",
+    "total_analyzed": 10,
+    "average_score": 50.0,
+    "excellent_count": 0,
+    "good_count": 0,
+    "other_count": 10
+  },
+  "products": {
+    "excellent": [],
+    "good": [],
+    "other": [
+      {
+        "keyword": "上班被公司坑了200万元",
+        "rank": 1,
+        "heat_value": 1063485,
+        "tag": "",
+        "category": "",
+        "product_name": "上班被公司坑了200万元主题商品",
+        "market_category": "文创产品",
+        "target_audience": "18-35岁年轻人群",
+        "description": "基于热搜话题'上班被公司坑了200万元'的创意产品",
+        "manufacturing_details": "小批量生产，待进一步分析",
+        "score_breakdown": {
+          "development_potential": 20,
+          "interest_level": 10,
+          "life_utility": 10,
+          "production_ease": 10
+        },
+        "total_score": 50,
+        "score_justification": "⚠️ AI分析失败，使用默认评分",
+        "research_summary": {
+          "social_media": "⚠️ 搜索结果受限",
+          "news_background": "⚠️ 搜索结果受限",
+          "user_insights": "⚠️ 搜索结果受限",
+          "market_potential": "基于通用市场分析"
+        },
+        "tier_name": "其他",
+        "tier_badge": "📋 其他",
+        "tier_class": "other"
+      },
+      {
+        "keyword": "宝可梦踩靖国神社红线不是初犯",
+        "rank": 2,
+        "heat_value": 749876,
+        "tag": "沸",
+        "category": "",
+        "product_name": "宝可梦踩靖国神社红线不是初犯主题商品",
+        "market_category": "文创产品",
+        "target_audience": "18-35岁年轻人群",
+        "description": "基于热搜话题'宝可梦踩靖国神社红线不是初犯'的创意产品",
+        "manufacturing_details": "小批量生产，待进一步分析",
+        "score_breakdown": {
+          "development_potential": 20,
+          "interest_level": 10,
+          "life_utility": 10,
+          "production_ease": 10
+        },
+        "total_score": 50,
+        "score_justification": "⚠️ AI分析失败，使用默认评分",
+        "research_summary": {
+          "social_media": "⚠️ 搜索结果受限",
+          "news_background": "⚠️ 搜索结果受限",
+          "user_insights": "⚠️ 搜索结果受限",
+          "market_potential": "基于通用市场分析"
+        },
+        "tier_name": "其他",
+        "tier_badge": "📋 其他",
+        "tier_class": "other"
+      },
+      {
+        "keyword": "中国新能源汽车持续领跑全球",
+        "rank": 3,
+        "heat_value": 717641,
+        "tag": "",
+        "category": "",
+        "product_name": "中国新能源汽车持续领跑全球主题商品",
+        "market_category": "文创产品",
+        "target_audience": "18-35岁年轻人群",
+        "description": "基于热搜话题'中国新能源汽车持续领跑全球'的创意产品",
+        "manufacturing_details": "小批量生产，待进一步分析",
+        "score_breakdown": {
+          "development_potential": 20,
+          "interest_level": 10,
+          "life_utility": 10,
+          "production_ease": 10
+        },
+        "total_score": 50,
+        "score_justification": "⚠️ AI分析失败，使用默认评分",
+        "research_summary": {
+          "social_media": "⚠️ 搜索结果受限",
+          "news_background": "⚠️ 搜索结果受限",
+          "user_insights": "⚠️ 搜索结果受限",
+          "market_potential": "基于通用市场分析"
+        },
+        "tier_name": "其他",
+        "tier_badge": "📋 其他",
+        "tier_class": "other"
+      },
+      {
+        "keyword": "林孝埈新身份沃尔沃品牌挚友",
+        "rank": 4,
+        "heat_value": 0,
+        "tag": "",
+        "category": "",
+        "product_name": "林孝埈新身份沃尔沃品牌挚友主题商品",
+        "market_category": "文创产品",
+        "target_audience": "18-35岁年轻人群",
+        "description": "基于热搜话题'林孝埈新身份沃尔沃品牌挚友'的创意产品",
+        "manufacturing_details": "小批量生产，待进一步分析",
+        "score_breakdown": {
+          "development_potential": 20,
+          "interest_level": 10,
+          "life_utility": 10,
+          "production_ease": 10
+        },
+        "total_score": 50,
+        "score_justification": "⚠️ AI分析失败，使用默认评分",
+        "research_summary": {
+          "social_media": "⚠️ 搜索结果受限",
+          "news_background": "⚠️ 搜索结果受限",
+          "user_insights": "⚠️ 搜索结果受限",
+          "market_potential": "基于通用市场分析"
+        },
+        "tier_name": "其他",
+        "tier_badge": "📋 其他",
+        "tier_class": "other"
+      },
+      {
+        "keyword": "乡村爱情18赵四嘎了",
+        "rank": 5,
+        "heat_value": 717009,
+        "tag": "",
+        "category": "剧集",
+        "product_name": "乡村爱情18赵四嘎了主题商品",
+        "market_category": "文创产品",
+        "target_audience": "18-35岁年轻人群",
+        "description": "基于热搜话题'乡村爱情18赵四嘎了'的创意产品",
+        "manufacturing_details": "小批量生产，待进一步分析",
+        "score_breakdown": {
+          "development_potential": 20,
+          "interest_level": 10,
+          "life_utility": 10,
+          "production_ease": 10
+        },
+        "total_score": 50,
+        "score_justification": "⚠️ AI分析失败，使用默认评分",
+        "research_summary": {
+          "social_media": "⚠️ 搜索结果受限",
+          "news_background": "⚠️ 搜索结果受限",
+          "user_insights": "⚠️ 搜索结果受限",
+          "market_potential": "基于通用市场分析"
+        },
+        "tier_name": "其他",
+        "tier_badge": "📋 其他",
+        "tier_class": "other"
+      },
+      {
+        "keyword": "年轻老板狂扫700万黄金店员报警",
+        "rank": 6,
+        "heat_value": 708046,
+        "tag": "官宣",
+        "category": "",
+        "product_name": "年轻老板狂扫700万黄金店员报警主题商品",
+        "market_category": "文创产品",
+        "target_audience": "18-35岁年轻人群",
+        "description": "基于热搜话题'年轻老板狂扫700万黄金店员报警'的创意产品",
+        "manufacturing_details": "小批量生产，待进一步分析",
+        "score_breakdown": {
+          "development_potential": 20,
+          "interest_level": 10,
+          "life_utility": 10,
+          "production_ease": 10
+        },
+        "total_score": 50,
+        "score_justification": "⚠️ AI分析失败，使用默认评分",
+        "research_summary": {
+          "social_media": "⚠️ 搜索结果受限",
+          "news_background": "⚠️ 搜索结果受限",
+          "user_insights": "⚠️ 搜索结果受限",
+          "market_potential": "基于通用市场分析"
+        },
+        "tier_name": "其他",
+        "tier_badge": "📋 其他",
+        "tier_class": "other"
+      },
+      {
+        "keyword": "普通人上镜能有多离谱",
+        "rank": 7,
+        "heat_value": 705267,
+        "tag": "",
+        "category": "",
+        "product_name": "普通人上镜能有多离谱主题商品",
+        "market_category": "文创产品",
+        "target_audience": "18-35岁年轻人群",
+        "description": "基于热搜话题'普通人上镜能有多离谱'的创意产品",
+        "manufacturing_details": "小批量生产，待进一步分析",
+        "score_breakdown": {
+          "development_potential": 20,
+          "interest_level": 10,
+          "life_utility": 10,
+          "production_ease": 10
+        },
+        "total_score": 50,
+        "score_justification": "⚠️ AI分析失败，使用默认评分",
+        "research_summary": {
+          "social_media": "⚠️ 搜索结果受限",
+          "news_background": "⚠️ 搜索结果受限",
+          "user_insights": "⚠️ 搜索结果受限",
+          "market_potential": "基于通用市场分析"
+        },
+        "tier_name": "其他",
+        "tier_badge": "📋 其他",
+        "tier_class": "other"
+      },
+      {
+        "keyword": "圣罗兰2026冬季男士时装秀",
+        "rank": 8,
+        "heat_value": 0,
+        "tag": "新",
+        "category": "",
+        "product_name": "圣罗兰2026冬季男士时装秀主题商品",
+        "market_category": "文创产品",
+        "target_audience": "18-35岁年轻人群",
+        "description": "基于热搜话题'圣罗兰2026冬季男士时装秀'的创意产品",
+        "manufacturing_details": "小批量生产，待进一步分析",
+        "score_breakdown": {
+          "development_potential": 20,
+          "interest_level": 10,
+          "life_utility": 10,
+          "production_ease": 10
+        },
+        "total_score": 50,
+        "score_justification": "⚠️ AI分析失败，使用默认评分",
+        "research_summary": {
+          "social_media": "⚠️ 搜索结果受限",
+          "news_background": "⚠️ 搜索结果受限",
+          "user_insights": "⚠️ 搜索结果受限",
+          "market_potential": "基于通用市场分析"
+        },
+        "tier_name": "其他",
+        "tier_badge": "📋 其他",
+        "tier_class": "other"
+      },
+      {
+        "keyword": "孙俪总台视后",
+        "rank": 9,
+        "heat_value": 703195,
+        "tag": "",
+        "category": "剧集",
+        "product_name": "孙俪总台视后主题商品",
+        "market_category": "文创产品",
+        "target_audience": "18-35岁年轻人群",
+        "description": "基于热搜话题'孙俪总台视后'的创意产品",
+        "manufacturing_details": "小批量生产，待进一步分析",
+        "score_breakdown": {
+          "development_potential": 20,
+          "interest_level": 10,
+          "life_utility": 10,
+          "production_ease": 10
+        },
+        "total_score": 50,
+        "score_justification": "⚠️ AI分析失败，使用默认评分",
+        "research_summary": {
+          "social_media": "⚠️ 搜索结果受限",
+          "news_background": "⚠️ 搜索结果受限",
+          "user_insights": "⚠️ 搜索结果受限",
+          "market_potential": "基于通用市场分析"
+        },
+        "tier_name": "其他",
+        "tier_badge": "📋 其他",
+        "tier_class": "other"
+      },
+      {
+        "keyword": "银行卡一定要彻底解绑",
+        "rank": 10,
+        "heat_value": 692670,
+        "tag": "",
+        "category": "",
+        "product_name": "银行卡一定要彻底解绑主题商品",
+        "market_category": "文创产品",
+        "target_audience": "18-35岁年轻人群",
+        "description": "基于热搜话题'银行卡一定要彻底解绑'的创意产品",
+        "manufacturing_details": "小批量生产，待进一步分析",
+        "score_breakdown": {
+          "development_potential": 20,
+          "interest_level": 10,
+          "life_utility": 10,
+          "production_ease": 10
+        },
+        "total_score": 50,
+        "score_justification": "⚠️ AI分析失败，使用默认评分",
+        "research_summary": {
+          "social_media": "⚠️ 搜索结果受限",
+          "news_background": "⚠️ 搜索结果受限",
+          "user_insights": "⚠️ 搜索结果受限",
+          "market_potential": "基于通用市场分析"
+        },
+        "tier_name": "其他",
+        "tier_badge": "📋 其他",
+        "tier_class": "other"
+      }
+    ]
+  },
+  "all_products": [
+    {
+      "keyword": "上班被公司坑了200万元",
+      "rank": 1,
+      "heat_value": 1063485,
+      "tag": "",
+      "category": "",
+      "product_name": "上班被公司坑了200万元主题商品",
+      "market_category": "文创产品",
+      "target_audience": "18-35岁年轻人群",
+      "description": "基于热搜话题'上班被公司坑了200万元'的创意产品",
+      "manufacturing_details": "小批量生产，待进一步分析",
+      "score_breakdown": {
+        "development_potential": 20,
+        "interest_level": 10,
+        "life_utility": 10,
+        "production_ease": 10
+      },
+      "total_score": 50,
+      "score_justification": "⚠️ AI分析失败，使用默认评分",
+      "research_summary": {
+        "social_media": "⚠️ 搜索结果受限",
+        "news_background": "⚠️ 搜索结果受限",
+        "user_insights": "⚠️ 搜索结果受限",
+        "market_potential": "基于通用市场分析"
+      },
+      "tier_name": "其他",
+      "tier_badge": "📋 其他",
+      "tier_class": "other"
+    },
+    {
+      "keyword": "宝可梦踩靖国神社红线不是初犯",
+      "rank": 2,
+      "heat_value": 749876,
+      "tag": "沸",
+      "category": "",
+      "product_name": "宝可梦踩靖国神社红线不是初犯主题商品",
+      "market_category": "文创产品",
+      "target_audience": "18-35岁年轻人群",
+      "description": "基于热搜话题'宝可梦踩靖国神社红线不是初犯'的创意产品",
+      "manufacturing_details": "小批量生产，待进一步分析",
+      "score_breakdown": {
+        "development_potential": 20,
+        "interest_level": 10,
+        "life_utility": 10,
+        "production_ease": 10
+      },
+      "total_score": 50,
+      "score_justification": "⚠️ AI分析失败，使用默认评分",
+      "research_summary": {
+        "social_media": "⚠️ 搜索结果受限",
+        "news_background": "⚠️ 搜索结果受限",
+        "user_insights": "⚠️ 搜索结果受限",
+        "market_potential": "基于通用市场分析"
+      },
+      "tier_name": "其他",
+      "tier_badge": "📋 其他",
+      "tier_class": "other"
+    },
+    {
+      "keyword": "中国新能源汽车持续领跑全球",
+      "rank": 3,
+      "heat_value": 717641,
+      "tag": "",
+      "category": "",
+      "product_name": "中国新能源汽车持续领跑全球主题商品",
+      "market_category": "文创产品",
+      "target_audience": "18-35岁年轻人群",
+      "description": "基于热搜话题'中国新能源汽车持续领跑全球'的创意产品",
+      "manufacturing_details": "小批量生产，待进一步分析",
+      "score_breakdown": {
+        "development_potential": 20,
+        "interest_level": 10,
+        "life_utility": 10,
+        "production_ease": 10
+      },
+      "total_score": 50,
+      "score_justification": "⚠️ AI分析失败，使用默认评分",
+      "research_summary": {
+        "social_media": "⚠️ 搜索结果受限",
+        "news_background": "⚠️ 搜索结果受限",
+        "user_insights": "⚠️ 搜索结果受限",
+        "market_potential": "基于通用市场分析"
+      },
+      "tier_name": "其他",
+      "tier_badge": "📋 其他",
+      "tier_class": "other"
+    },
+    {
+      "keyword": "林孝埈新身份沃尔沃品牌挚友",
+      "rank": 4,
+      "heat_value": 0,
+      "tag": "",
+      "category": "",
+      "product_name": "林孝埈新身份沃尔沃品牌挚友主题商品",
+      "market_category": "文创产品",
+      "target_audience": "18-35岁年轻人群",
+      "description": "基于热搜话题'林孝埈新身份沃尔沃品牌挚友'的创意产品",
+      "manufacturing_details": "小批量生产，待进一步分析",
+      "score_breakdown": {
+        "development_potential": 20,
+        "interest_level": 10,
+        "life_utility": 10,
+        "production_ease": 10
+      },
+      "total_score": 50,
+      "score_justification": "⚠️ AI分析失败，使用默认评分",
+      "research_summary": {
+        "social_media": "⚠️ 搜索结果受限",
+        "news_background": "⚠️ 搜索结果受限",
+        "user_insights": "⚠️ 搜索结果受限",
+        "market_potential": "基于通用市场分析"
+      },
+      "tier_name": "其他",
+      "tier_badge": "📋 其他",
+      "tier_class": "other"
+    },
+    {
+      "keyword": "乡村爱情18赵四嘎了",
+      "rank": 5,
+      "heat_value": 717009,
+      "tag": "",
+      "category": "剧集",
+      "product_name": "乡村爱情18赵四嘎了主题商品",
+      "market_category": "文创产品",
+      "target_audience": "18-35岁年轻人群",
+      "description": "基于热搜话题'乡村爱情18赵四嘎了'的创意产品",
+      "manufacturing_details": "小批量生产，待进一步分析",
+      "score_breakdown": {
+        "development_potential": 20,
+        "interest_level": 10,
+        "life_utility": 10,
+        "production_ease": 10
+      },
+      "total_score": 50,
+      "score_justification": "⚠️ AI分析失败，使用默认评分",
+      "research_summary": {
+        "social_media": "⚠️ 搜索结果受限",
+        "news_background": "⚠️ 搜索结果受限",
+        "user_insights": "⚠️ 搜索结果受限",
+        "market_potential": "基于通用市场分析"
+      },
+      "tier_name": "其他",
+      "tier_badge": "📋 其他",
+      "tier_class": "other"
+    },
+    {
+      "keyword": "年轻老板狂扫700万黄金店员报警",
+      "rank": 6,
+      "heat_value": 708046,
+      "tag": "官宣",
+      "category": "",
+      "product_name": "年轻老板狂扫700万黄金店员报警主题商品",
+      "market_category": "文创产品",
+      "target_audience": "18-35岁年轻人群",
+      "description": "基于热搜话题'年轻老板狂扫700万黄金店员报警'的创意产品",
+      "manufacturing_details": "小批量生产，待进一步分析",
+      "score_breakdown": {
+        "development_potential": 20,
+        "interest_level": 10,
+        "life_utility": 10,
+        "production_ease": 10
+      },
+      "total_score": 50,
+      "score_justification": "⚠️ AI分析失败，使用默认评分",
+      "research_summary": {
+        "social_media": "⚠️ 搜索结果受限",
+        "news_background": "⚠️ 搜索结果受限",
+        "user_insights": "⚠️ 搜索结果受限",
+        "market_potential": "基于通用市场分析"
+      },
+      "tier_name": "其他",
+      "tier_badge": "📋 其他",
+      "tier_class": "other"
+    },
+    {
+      "keyword": "普通人上镜能有多离谱",
+      "rank": 7,
+      "heat_value": 705267,
+      "tag": "",
+      "category": "",
+      "product_name": "普通人上镜能有多离谱主题商品",
+      "market_category": "文创产品",
+      "target_audience": "18-35岁年轻人群",
+      "description": "基于热搜话题'普通人上镜能有多离谱'的创意产品",
+      "manufacturing_details": "小批量生产，待进一步分析",
+      "score_breakdown": {
+        "development_potential": 20,
+        "interest_level": 10,
+        "life_utility": 10,
+        "production_ease": 10
+      },
+      "total_score": 50,
+      "score_justification": "⚠️ AI分析失败，使用默认评分",
+      "research_summary": {
+        "social_media": "⚠️ 搜索结果受限",
+        "news_background": "⚠️ 搜索结果受限",
+        "user_insights": "⚠️ 搜索结果受限",
+        "market_potential": "基于通用市场分析"
+      },
+      "tier_name": "其他",
+      "tier_badge": "📋 其他",
+      "tier_class": "other"
+    },
+    {
+      "keyword": "圣罗兰2026冬季男士时装秀",
+      "rank": 8,
+      "heat_value": 0,
+      "tag": "新",
+      "category": "",
+      "product_name": "圣罗兰2026冬季男士时装秀主题商品",
+      "market_category": "文创产品",
+      "target_audience": "18-35岁年轻人群",
+      "description": "基于热搜话题'圣罗兰2026冬季男士时装秀'的创意产品",
+      "manufacturing_details": "小批量生产，待进一步分析",
+      "score_breakdown": {
+        "development_potential": 20,
+        "interest_level": 10,
+        "life_utility": 10,
+        "production_ease": 10
+      },
+      "total_score": 50,
+      "score_justification": "⚠️ AI分析失败，使用默认评分",
+      "research_summary": {
+        "social_media": "⚠️ 搜索结果受限",
+        "news_background": "⚠️ 搜索结果受限",
+        "user_insights": "⚠️ 搜索结果受限",
+        "market_potential": "基于通用市场分析"
+      },
+      "tier_name": "其他",
+      "tier_badge": "📋 其他",
+      "tier_class": "other"
+    },
+    {
+      "keyword": "孙俪总台视后",
+      "rank": 9,
+      "heat_value": 703195,
+      "tag": "",
+      "category": "剧集",
+      "product_name": "孙俪总台视后主题商品",
+      "market_category": "文创产品",
+      "target_audience": "18-35岁年轻人群",
+      "description": "基于热搜话题'孙俪总台视后'的创意产品",
+      "manufacturing_details": "小批量生产，待进一步分析",
+      "score_breakdown": {
+        "development_potential": 20,
+        "interest_level": 10,
+        "life_utility": 10,
+        "production_ease": 10
+      },
+      "total_score": 50,
+      "score_justification": "⚠️ AI分析失败，使用默认评分",
+      "research_summary": {
+        "social_media": "⚠️ 搜索结果受限",
+        "news_background": "⚠️ 搜索结果受限",
+        "user_insights": "⚠️ 搜索结果受限",
+        "market_potential": "基于通用市场分析"
+      },
+      "tier_name": "其他",
+      "tier_badge": "📋 其他",
+      "tier_class": "other"
+    },
+    {
+      "keyword": "银行卡一定要彻底解绑",
+      "rank": 10,
+      "heat_value": 692670,
+      "tag": "",
+      "category": "",
+      "product_name": "银行卡一定要彻底解绑主题商品",
+      "market_category": "文创产品",
+      "target_audience": "18-35岁年轻人群",
+      "description": "基于热搜话题'银行卡一定要彻底解绑'的创意产品",
+      "manufacturing_details": "小批量生产，待进一步分析",
+      "score_breakdown": {
+        "development_potential": 20,
+        "interest_level": 10,
+        "life_utility": 10,
+        "production_ease": 10
+      },
+      "total_score": 50,
+      "score_justification": "⚠️ AI分析失败，使用默认评分",
+      "research_summary": {
+        "social_media": "⚠️ 搜索结果受限",
+        "news_background": "⚠️ 搜索结果受限",
+        "user_insights": "⚠️ 搜索结果受限",
+        "market_potential": "基于通用市场分析"
+      },
+      "tier_name": "其他",
+      "tier_badge": "📋 其他",
+      "tier_class": "other"
+    }
+  ]
+}
