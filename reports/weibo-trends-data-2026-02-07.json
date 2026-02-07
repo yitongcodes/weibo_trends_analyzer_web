@@ -1,0 +1,598 @@
+{
+  "metadata": {
+    "generated_at": "2026年02月07日 03:22:43",
+    "total_analyzed": 10,
+    "average_score": 50.0,
+    "excellent_count": 0,
+    "good_count": 0,
+    "other_count": 10
+  },
+  "products": {
+    "excellent": [],
+    "good": [],
+    "other": [
+      {
+        "keyword": "千问",
+        "rank": 1,
+        "heat_value": 1364709,
+        "tag": "",
+        "category": "",
+        "product_name": "千问主题商品",
+        "market_category": "文创产品",
+        "target_audience": "18-35岁年轻人群",
+        "description": "基于热搜话题'千问'的创意产品",
+        "manufacturing_details": "小批量生产，待进一步分析",
+        "score_breakdown": {
+          "development_potential": 20,
+          "interest_level": 10,
+          "life_utility": 10,
+          "production_ease": 10
+        },
+        "total_score": 50,
+        "score_justification": "⚠️ AI分析失败，使用默认评分",
+        "research_summary": {
+          "social_media": "⚠️ 搜索结果受限",
+          "news_background": "⚠️ 搜索结果受限",
+          "user_insights": "⚠️ 搜索结果受限",
+          "market_potential": "基于通用市场分析"
+        },
+        "tier_name": "其他",
+        "tier_badge": "📋 其他",
+        "tier_class": "other"
+      },
+      {
+        "keyword": "米兰开幕式 好正常好好看",
+        "rank": 2,
+        "heat_value": 909693,
+        "tag": "",
+        "category": "",
+        "product_name": "米兰开幕式 好正常好好看主题商品",
+        "market_category": "文创产品",
+        "target_audience": "18-35岁年轻人群",
+        "description": "基于热搜话题'米兰开幕式 好正常好好看'的创意产品",
+        "manufacturing_details": "小批量生产，待进一步分析",
+        "score_breakdown": {
+          "development_potential": 20,
+          "interest_level": 10,
+          "life_utility": 10,
+          "production_ease": 10
+        },
+        "total_score": 50,
+        "score_justification": "⚠️ AI分析失败，使用默认评分",
+        "research_summary": {
+          "social_media": "⚠️ 搜索结果受限",
+          "news_background": "⚠️ 搜索结果受限",
+          "user_insights": "⚠️ 搜索结果受限",
+          "market_potential": "基于通用市场分析"
+        },
+        "tier_name": "其他",
+        "tier_badge": "📋 其他",
+        "tier_class": "other"
+      },
+      {
+        "keyword": "中国网络视听盛典",
+        "rank": 3,
+        "heat_value": 727866,
+        "tag": "",
+        "category": "综艺",
+        "product_name": "中国网络视听盛典主题商品",
+        "market_category": "文创产品",
+        "target_audience": "18-35岁年轻人群",
+        "description": "基于热搜话题'中国网络视听盛典'的创意产品",
+        "manufacturing_details": "小批量生产，待进一步分析",
+        "score_breakdown": {
+          "development_potential": 20,
+          "interest_level": 10,
+          "life_utility": 10,
+          "production_ease": 10
+        },
+        "total_score": 50,
+        "score_justification": "⚠️ AI分析失败，使用默认评分",
+        "research_summary": {
+          "social_media": "⚠️ 搜索结果受限",
+          "news_background": "⚠️ 搜索结果受限",
+          "user_insights": "⚠️ 搜索结果受限",
+          "market_potential": "基于通用市场分析"
+        },
+        "tier_name": "其他",
+        "tier_badge": "📋 其他",
+        "tier_class": "other"
+      },
+      {
+        "keyword": "美团外卖周末半价吃大餐",
+        "rank": 4,
+        "heat_value": 0,
+        "tag": "新",
+        "category": "",
+        "product_name": "美团外卖周末半价吃大餐主题商品",
+        "market_category": "文创产品",
+        "target_audience": "18-35岁年轻人群",
+        "description": "基于热搜话题'美团外卖周末半价吃大餐'的创意产品",
+        "manufacturing_details": "小批量生产，待进一步分析",
+        "score_breakdown": {
+          "development_potential": 20,
+          "interest_level": 10,
+          "life_utility": 10,
+          "production_ease": 10
+        },
+        "total_score": 50,
+        "score_justification": "⚠️ AI分析失败，使用默认评分",
+        "research_summary": {
+          "social_media": "⚠️ 搜索结果受限",
+          "news_background": "⚠️ 搜索结果受限",
+          "user_insights": "⚠️ 搜索结果受限",
+          "market_potential": "基于通用市场分析"
+        },
+        "tier_name": "其他",
+        "tier_badge": "📋 其他",
+        "tier_class": "other"
+      },
+      {
+        "keyword": "吴京回应唇部紧急护理",
+        "rank": 5,
+        "heat_value": 454525,
+        "tag": "",
+        "category": "电影",
+        "product_name": "吴京回应唇部紧急护理主题商品",
+        "market_category": "文创产品",
+        "target_audience": "18-35岁年轻人群",
+        "description": "基于热搜话题'吴京回应唇部紧急护理'的创意产品",
+        "manufacturing_details": "小批量生产，待进一步分析",
+        "score_breakdown": {
+          "development_potential": 20,
+          "interest_level": 10,
+          "life_utility": 10,
+          "production_ease": 10
+        },
+        "total_score": 50,
+        "score_justification": "⚠️ AI分析失败，使用默认评分",
+        "research_summary": {
+          "social_media": "⚠️ 搜索结果受限",
+          "news_background": "⚠️ 搜索结果受限",
+          "user_insights": "⚠️ 搜索结果受限",
+          "market_potential": "基于通用市场分析"
+        },
+        "tier_name": "其他",
+        "tier_badge": "📋 其他",
+        "tier_class": "other"
+      },
+      {
+        "keyword": "金银价飙升米兰冬奥金牌史上最贵",
+        "rank": 6,
+        "heat_value": 429015,
+        "tag": "火热",
+        "category": "",
+        "product_name": "金银价飙升米兰冬奥金牌史上最贵主题商品",
+        "market_category": "文创产品",
+        "target_audience": "18-35岁年轻人群",
+        "description": "基于热搜话题'金银价飙升米兰冬奥金牌史上最贵'的创意产品",
+        "manufacturing_details": "小批量生产，待进一步分析",
+        "score_breakdown": {
+          "development_potential": 20,
+          "interest_level": 10,
+          "life_utility": 10,
+          "production_ease": 10
+        },
+        "total_score": 50,
+        "score_justification": "⚠️ AI分析失败，使用默认评分",
+        "research_summary": {
+          "social_media": "⚠️ 搜索结果受限",
+          "news_background": "⚠️ 搜索结果受限",
+          "user_insights": "⚠️ 搜索结果受限",
+          "market_potential": "基于通用市场分析"
+        },
+        "tier_name": "其他",
+        "tier_badge": "📋 其他",
+        "tier_class": "other"
+      },
+      {
+        "keyword": "昭阳公主",
+        "rank": 7,
+        "heat_value": 385116,
+        "tag": "",
+        "category": "剧集",
+        "product_name": "昭阳公主主题商品",
+        "market_category": "文创产品",
+        "target_audience": "18-35岁年轻人群",
+        "description": "基于热搜话题'昭阳公主'的创意产品",
+        "manufacturing_details": "小批量生产，待进一步分析",
+        "score_breakdown": {
+          "development_potential": 20,
+          "interest_level": 10,
+          "life_utility": 10,
+          "production_ease": 10
+        },
+        "total_score": 50,
+        "score_justification": "⚠️ AI分析失败，使用默认评分",
+        "research_summary": {
+          "social_media": "⚠️ 搜索结果受限",
+          "news_background": "⚠️ 搜索结果受限",
+          "user_insights": "⚠️ 搜索结果受限",
+          "market_potential": "基于通用市场分析"
+        },
+        "tier_name": "其他",
+        "tier_badge": "📋 其他",
+        "tier_class": "other"
+      },
+      {
+        "keyword": "春晚为什么选择义乌",
+        "rank": 8,
+        "heat_value": 0,
+        "tag": "新",
+        "category": "",
+        "product_name": "春晚为什么选择义乌主题商品",
+        "market_category": "文创产品",
+        "target_audience": "18-35岁年轻人群",
+        "description": "基于热搜话题'春晚为什么选择义乌'的创意产品",
+        "manufacturing_details": "小批量生产，待进一步分析",
+        "score_breakdown": {
+          "development_potential": 20,
+          "interest_level": 10,
+          "life_utility": 10,
+          "production_ease": 10
+        },
+        "total_score": 50,
+        "score_justification": "⚠️ AI分析失败，使用默认评分",
+        "research_summary": {
+          "social_media": "⚠️ 搜索结果受限",
+          "news_background": "⚠️ 搜索结果受限",
+          "user_insights": "⚠️ 搜索结果受限",
+          "market_potential": "基于通用市场分析"
+        },
+        "tier_name": "其他",
+        "tier_badge": "📋 其他",
+        "tier_class": "other"
+      },
+      {
+        "keyword": "王楚钦尊重国家队的安排",
+        "rank": 9,
+        "heat_value": 206638,
+        "tag": "",
+        "category": "",
+        "product_name": "王楚钦尊重国家队的安排主题商品",
+        "market_category": "文创产品",
+        "target_audience": "18-35岁年轻人群",
+        "description": "基于热搜话题'王楚钦尊重国家队的安排'的创意产品",
+        "manufacturing_details": "小批量生产，待进一步分析",
+        "score_breakdown": {
+          "development_potential": 20,
+          "interest_level": 10,
+          "life_utility": 10,
+          "production_ease": 10
+        },
+        "total_score": 50,
+        "score_justification": "⚠️ AI分析失败，使用默认评分",
+        "research_summary": {
+          "social_media": "⚠️ 搜索结果受限",
+          "news_background": "⚠️ 搜索结果受限",
+          "user_insights": "⚠️ 搜索结果受限",
+          "market_potential": "基于通用市场分析"
+        },
+        "tier_name": "其他",
+        "tier_badge": "📋 其他",
+        "tier_class": "other"
+      },
+      {
+        "keyword": "郎朗 权威",
+        "rank": 10,
+        "heat_value": 199925,
+        "tag": "新",
+        "category": "",
+        "product_name": "郎朗 权威主题商品",
+        "market_category": "文创产品",
+        "target_audience": "18-35岁年轻人群",
+        "description": "基于热搜话题'郎朗 权威'的创意产品",
+        "manufacturing_details": "小批量生产，待进一步分析",
+        "score_breakdown": {
+          "development_potential": 20,
+          "interest_level": 10,
+          "life_utility": 10,
+          "production_ease": 10
+        },
+        "total_score": 50,
+        "score_justification": "⚠️ AI分析失败，使用默认评分",
+        "research_summary": {
+          "social_media": "⚠️ 搜索结果受限",
+          "news_background": "⚠️ 搜索结果受限",
+          "user_insights": "⚠️ 搜索结果受限",
+          "market_potential": "基于通用市场分析"
+        },
+        "tier_name": "其他",
+        "tier_badge": "📋 其他",
+        "tier_class": "other"
+      }
+    ]
+  },
+  "all_products": [
+    {
+      "keyword": "千问",
+      "rank": 1,
+      "heat_value": 1364709,
+      "tag": "",
+      "category": "",
+      "product_name": "千问主题商品",
+      "market_category": "文创产品",
+      "target_audience": "18-35岁年轻人群",
+      "description": "基于热搜话题'千问'的创意产品",
+      "manufacturing_details": "小批量生产，待进一步分析",
+      "score_breakdown": {
+        "development_potential": 20,
+        "interest_level": 10,
+        "life_utility": 10,
+        "production_ease": 10
+      },
+      "total_score": 50,
+      "score_justification": "⚠️ AI分析失败，使用默认评分",
+      "research_summary": {
+        "social_media": "⚠️ 搜索结果受限",
+        "news_background": "⚠️ 搜索结果受限",
+        "user_insights": "⚠️ 搜索结果受限",
+        "market_potential": "基于通用市场分析"
+      },
+      "tier_name": "其他",
+      "tier_badge": "📋 其他",
+      "tier_class": "other"
+    },
+    {
+      "keyword": "米兰开幕式 好正常好好看",
+      "rank": 2,
+      "heat_value": 909693,
+      "tag": "",
+      "category": "",
+      "product_name": "米兰开幕式 好正常好好看主题商品",
+      "market_category": "文创产品",
+      "target_audience": "18-35岁年轻人群",
+      "description": "基于热搜话题'米兰开幕式 好正常好好看'的创意产品",
+      "manufacturing_details": "小批量生产，待进一步分析",
+      "score_breakdown": {
+        "development_potential": 20,
+        "interest_level": 10,
+        "life_utility": 10,
+        "production_ease": 10
+      },
+      "total_score": 50,
+      "score_justification": "⚠️ AI分析失败，使用默认评分",
+      "research_summary": {
+        "social_media": "⚠️ 搜索结果受限",
+        "news_background": "⚠️ 搜索结果受限",
+        "user_insights": "⚠️ 搜索结果受限",
+        "market_potential": "基于通用市场分析"
+      },
+      "tier_name": "其他",
+      "tier_badge": "📋 其他",
+      "tier_class": "other"
+    },
+    {
+      "keyword": "中国网络视听盛典",
+      "rank": 3,
+      "heat_value": 727866,
+      "tag": "",
+      "category": "综艺",
+      "product_name": "中国网络视听盛典主题商品",
+      "market_category": "文创产品",
+      "target_audience": "18-35岁年轻人群",
+      "description": "基于热搜话题'中国网络视听盛典'的创意产品",
+      "manufacturing_details": "小批量生产，待进一步分析",
+      "score_breakdown": {
+        "development_potential": 20,
+        "interest_level": 10,
+        "life_utility": 10,
+        "production_ease": 10
+      },
+      "total_score": 50,
+      "score_justification": "⚠️ AI分析失败，使用默认评分",
+      "research_summary": {
+        "social_media": "⚠️ 搜索结果受限",
+        "news_background": "⚠️ 搜索结果受限",
+        "user_insights": "⚠️ 搜索结果受限",
+        "market_potential": "基于通用市场分析"
+      },
+      "tier_name": "其他",
+      "tier_badge": "📋 其他",
+      "tier_class": "other"
+    },
+    {
+      "keyword": "美团外卖周末半价吃大餐",
+      "rank": 4,
+      "heat_value": 0,
+      "tag": "新",
+      "category": "",
+      "product_name": "美团外卖周末半价吃大餐主题商品",
+      "market_category": "文创产品",
+      "target_audience": "18-35岁年轻人群",
+      "description": "基于热搜话题'美团外卖周末半价吃大餐'的创意产品",
+      "manufacturing_details": "小批量生产，待进一步分析",
+      "score_breakdown": {
+        "development_potential": 20,
+        "interest_level": 10,
+        "life_utility": 10,
+        "production_ease": 10
+      },
+      "total_score": 50,
+      "score_justification": "⚠️ AI分析失败，使用默认评分",
+      "research_summary": {
+        "social_media": "⚠️ 搜索结果受限",
+        "news_background": "⚠️ 搜索结果受限",
+        "user_insights": "⚠️ 搜索结果受限",
+        "market_potential": "基于通用市场分析"
+      },
+      "tier_name": "其他",
+      "tier_badge": "📋 其他",
+      "tier_class": "other"
+    },
+    {
+      "keyword": "吴京回应唇部紧急护理",
+      "rank": 5,
+      "heat_value": 454525,
+      "tag": "",
+      "category": "电影",
+      "product_name": "吴京回应唇部紧急护理主题商品",
+      "market_category": "文创产品",
+      "target_audience": "18-35岁年轻人群",
+      "description": "基于热搜话题'吴京回应唇部紧急护理'的创意产品",
+      "manufacturing_details": "小批量生产，待进一步分析",
+      "score_breakdown": {
+        "development_potential": 20,
+        "interest_level": 10,
+        "life_utility": 10,
+        "production_ease": 10
+      },
+      "total_score": 50,
+      "score_justification": "⚠️ AI分析失败，使用默认评分",
+      "research_summary": {
+        "social_media": "⚠️ 搜索结果受限",
+        "news_background": "⚠️ 搜索结果受限",
+        "user_insights": "⚠️ 搜索结果受限",
+        "market_potential": "基于通用市场分析"
+      },
+      "tier_name": "其他",
+      "tier_badge": "📋 其他",
+      "tier_class": "other"
+    },
+    {
+      "keyword": "金银价飙升米兰冬奥金牌史上最贵",
+      "rank": 6,
+      "heat_value": 429015,
+      "tag": "火热",
+      "category": "",
+      "product_name": "金银价飙升米兰冬奥金牌史上最贵主题商品",
+      "market_category": "文创产品",
+      "target_audience": "18-35岁年轻人群",
+      "description": "基于热搜话题'金银价飙升米兰冬奥金牌史上最贵'的创意产品",
+      "manufacturing_details": "小批量生产，待进一步分析",
+      "score_breakdown": {
+        "development_potential": 20,
+        "interest_level": 10,
+        "life_utility": 10,
+        "production_ease": 10
+      },
+      "total_score": 50,
+      "score_justification": "⚠️ AI分析失败，使用默认评分",
+      "research_summary": {
+        "social_media": "⚠️ 搜索结果受限",
+        "news_background": "⚠️ 搜索结果受限",
+        "user_insights": "⚠️ 搜索结果受限",
+        "market_potential": "基于通用市场分析"
+      },
+      "tier_name": "其他",
+      "tier_badge": "📋 其他",
+      "tier_class": "other"
+    },
+    {
+      "keyword": "昭阳公主",
+      "rank": 7,
+      "heat_value": 385116,
+      "tag": "",
+      "category": "剧集",
+      "product_name": "昭阳公主主题商品",
+      "market_category": "文创产品",
+      "target_audience": "18-35岁年轻人群",
+      "description": "基于热搜话题'昭阳公主'的创意产品",
+      "manufacturing_details": "小批量生产，待进一步分析",
+      "score_breakdown": {
+        "development_potential": 20,
+        "interest_level": 10,
+        "life_utility": 10,
+        "production_ease": 10
+      },
+      "total_score": 50,
+      "score_justification": "⚠️ AI分析失败，使用默认评分",
+      "research_summary": {
+        "social_media": "⚠️ 搜索结果受限",
+        "news_background": "⚠️ 搜索结果受限",
+        "user_insights": "⚠️ 搜索结果受限",
+        "market_potential": "基于通用市场分析"
+      },
+      "tier_name": "其他",
+      "tier_badge": "📋 其他",
+      "tier_class": "other"
+    },
+    {
+      "keyword": "春晚为什么选择义乌",
+      "rank": 8,
+      "heat_value": 0,
+      "tag": "新",
+      "category": "",
+      "product_name": "春晚为什么选择义乌主题商品",
+      "market_category": "文创产品",
+      "target_audience": "18-35岁年轻人群",
+      "description": "基于热搜话题'春晚为什么选择义乌'的创意产品",
+      "manufacturing_details": "小批量生产，待进一步分析",
+      "score_breakdown": {
+        "development_potential": 20,
+        "interest_level": 10,
+        "life_utility": 10,
+        "production_ease": 10
+      },
+      "total_score": 50,
+      "score_justification": "⚠️ AI分析失败，使用默认评分",
+      "research_summary": {
+        "social_media": "⚠️ 搜索结果受限",
+        "news_background": "⚠️ 搜索结果受限",
+        "user_insights": "⚠️ 搜索结果受限",
+        "market_potential": "基于通用市场分析"
+      },
+      "tier_name": "其他",
+      "tier_badge": "📋 其他",
+      "tier_class": "other"
+    },
+    {
+      "keyword": "王楚钦尊重国家队的安排",
+      "rank": 9,
+      "heat_value": 206638,
+      "tag": "",
+      "category": "",
+      "product_name": "王楚钦尊重国家队的安排主题商品",
+      "market_category": "文创产品",
+      "target_audience": "18-35岁年轻人群",
+      "description": "基于热搜话题'王楚钦尊重国家队的安排'的创意产品",
+      "manufacturing_details": "小批量生产，待进一步分析",
+      "score_breakdown": {
+        "development_potential": 20,
+        "interest_level": 10,
+        "life_utility": 10,
+        "production_ease": 10
+      },
+      "total_score": 50,
+      "score_justification": "⚠️ AI分析失败，使用默认评分",
+      "research_summary": {
+        "social_media": "⚠️ 搜索结果受限",
+        "news_background": "⚠️ 搜索结果受限",
+        "user_insights": "⚠️ 搜索结果受限",
+        "market_potential": "基于通用市场分析"
+      },
+      "tier_name": "其他",
+      "tier_badge": "📋 其他",
+      "tier_class": "other"
+    },
+    {
+      "keyword": "郎朗 权威",
+      "rank": 10,
+      "heat_value": 199925,
+      "tag": "新",
+      "category": "",
+      "product_name": "郎朗 权威主题商品",
+      "market_category": "文创产品",
+      "target_audience": "18-35岁年轻人群",
+      "description": "基于热搜话题'郎朗 权威'的创意产品",
+      "manufacturing_details": "小批量生产，待进一步分析",
+      "score_breakdown": {
+        "development_potential": 20,
+        "interest_level": 10,
+        "life_utility": 10,
+        "production_ease": 10
+      },
+      "total_score": 50,
+      "score_justification": "⚠️ AI分析失败，使用默认评分",
+      "research_summary": {
+        "social_media": "⚠️ 搜索结果受限",
+        "news_background": "⚠️ 搜索结果受限",
+        "user_insights": "⚠️ 搜索结果受限",
+        "market_potential": "基于通用市场分析"
+      },
+      "tier_name": "其他",
+      "tier_badge": "📋 其他",
+      "tier_class": "other"
+    }
+  ]
+}
